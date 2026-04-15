@@ -6,29 +6,320 @@
     <title>Chicago Cleaners: Stop Losing $400 Move-Out Jobs to Dispatch Lag</title>
     <meta name="description" content="undefined">
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        // 确保 tailwind 存在
+        if (typeof tailwind === 'undefined') {
+            // 如果 Tailwind 未加载，使用内联样式作为备用
+            const style = document.createElement('style');
+            style.textContent = `
+                @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+                body {
+                    font-family: 'Inter', sans-serif;
+                    background-color: #0a0a0a;
+                    color: white;
+                }
+                .text-gradient {
+                    background: linear-gradient(90deg, #f97316, #ef4444);
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                }
+                .bg-gray-900 {
+                    background-color: #111827;
+                }
+                .bg-gray-800 {
+                    background-color: #1f2937;
+                }
+                .bg-gray-700 {
+                    background-color: #374151;
+                }
+                .bg-orange-500 {
+                    background-color: #f97316;
+                }
+                .bg-orange-600 {
+                    background-color: #ea580c;
+                }
+                .text-orange-500 {
+                    color: #f97316;
+                }
+                .text-gray-300 {
+                    color: #d1d5db;
+                }
+                .text-gray-400 {
+                    color: #9ca3af;
+                }
+                .text-gray-500 {
+                    color: #6b7280;
+                }
+                .border {
+                    border-width: 1px;
+                }
+                .border-orange-500 {
+                    border-color: #f97316;
+                }
+                .border-gray-800 {
+                    border-color: #1f2937;
+                }
+                .border-gray-700 {
+                    border-color: #374151;
+                }
+                .rounded-lg {
+                    border-radius: 0.5rem;
+                }
+                .p-4 {
+                    padding: 1rem;
+                }
+                .p-6 {
+                    padding: 1.5rem;
+                }
+                .p-8 {
+                    padding: 2rem;
+                }
+                .mt-4 {
+                    margin-top: 1rem;
+                }
+                .mt-6 {
+                    margin-top: 1.5rem;
+                }
+                .mt-8 {
+                    margin-top: 2rem;
+                }
+                .mb-4 {
+                    margin-bottom: 1rem;
+                }
+                .mb-6 {
+                    margin-bottom: 1.5rem;
+                }
+                .mb-8 {
+                    margin-bottom: 2rem;
+                }
+                .mb-20 {
+                    margin-bottom: 5rem;
+                }
+                .w-full {
+                    width: 100%;
+                }
+                .max-w-6xl {
+                    max-width: 72rem;
+                }
+                .mx-auto {
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+                .px-4 {
+                    padding-left: 1rem;
+                    padding-right: 1rem;
+                }
+                .py-12 {
+                    padding-top: 3rem;
+                    padding-bottom: 3rem;
+                }
+                .text-center {
+                    text-align: center;
+                }
+                .text-left {
+                    text-align: left;
+                }
+                .font-bold {
+                    font-weight: 700;
+                }
+                .font-semibold {
+                    font-weight: 600;
+                }
+                .text-xl {
+                    font-size: 1.25rem;
+                }
+                .text-2xl {
+                    font-size: 1.5rem;
+                }
+                .text-3xl {
+                    font-size: 1.875rem;
+                }
+                .flex {
+                    display: flex;
+                }
+                .flex-col {
+                    flex-direction: column;
+                }
+                .md\:flex-row {
+                    flex-direction: row;
+                }
+                .justify-center {
+                    justify-content: center;
+                }
+                .justify-between {
+                    justify-content: space-between;
+                }
+                .items-center {
+                    align-items: center;
+                }
+                .md\:items-end {
+                    align-items: flex-end;
+                }
+                .space-x-4 {
+                    gap: 1rem;
+                }
+                .space-y-3 {
+                    gap: 0.75rem;
+                }
+                .space-y-4 {
+                    gap: 1rem;
+                }
+                .space-y-8 {
+                    gap: 2rem;
+                }
+                .grid {
+                    display: grid;
+                }
+                .grid-cols-1 {
+                    grid-template-columns: repeat(1, minmax(0, 1fr));
+                }
+                .md\:grid-cols-2 {
+                    grid-template-columns: repeat(2, minmax(0, 1fr));
+                }
+                .gap-8 {
+                    gap: 2rem;
+                }
+                .hover\:bg-orange-600:hover {
+                    background-color: #ea580c;
+                }
+                .hover\:text-white:hover {
+                    color: white;
+                }
+                .transition-colors {
+                    transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+                    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+                    transition-duration: 150ms;
+                }
+                .animate-pulse-slow {
+                    animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+                }
+                .animate-pulse {
+                    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+                }
+                @keyframes pulse {
+                    0%, 100% {
+                        opacity: 1;
+                    }
+                    50% {
+                        opacity: 0.5;
+                    }
+                }
+                @keyframes fadeIn {
+                    0% {
+                        opacity: 0;
+                        transform: translateY(20px);
+                    }
+                    100% {
+                        opacity: 1;
+                        transform: translateY(0);
+                    }
+                }
+                .overflow-x-auto {
+                    overflow-x: auto;
+                }
+                .table {
+                    display: table;
+                }
+                .border-collapse {
+                    border-collapse: collapse;
+                }
+                .border-b {
+                    border-bottom-width: 1px;
+                }
+                .hover\:bg-gray-800:hover {
+                    background-color: #1f2937;
+                }
+                .card-hover {
+                    transition: all 0.3s ease;
+                }
+                .card-hover:hover {
+                    transform: translateY(-5px);
+                    box-shadow: 0 10px 25px -5px rgba(249, 115, 22, 0.3);
+                }
+                .glow {
+                    box-shadow: 0 0 20px rgba(249, 115, 22, 0.5);
+                }
+                .resize-none {
+                    resize: none;
+                }
+                .focus\:outline-none:focus {
+                    outline: 2px solid transparent;
+                    outline-offset: 2px;
+                }
+                .focus\:ring-2:focus {
+                    ring-width: 2px;
+                }
+                .focus\:ring-orange-500:focus {
+                    ring-color: #f97316;
+                }
+                .cursor-pointer {
+                    cursor: pointer;
+                }
+                .list-none {
+                    list-style-type: none;
+                }
+                .transition-transform {
+                    transition-property: transform;
+                    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+                    transition-duration: 150ms;
+                }
+                .duration-300 {
+                    transition-duration: 300ms;
+                }
+                .group-open\:rotate-180:
+                    transform: rotate(180deg);
+                }
+                .prose {
+                    max-width: 65ch;
+                }
+                .prose-invert {
+                    color: #e5e7eb;
+                }
+                .prose-invert h3 {
+                    color: #ffffff;
+                }
+                .prose-invert p {
+                    color: #d1d5db;
+                }
+                .prose-invert a {
+                    color: #f97316;
+                }
+                .prose-invert a:hover {
+                    color: #fb923c;
+                }
+                .prose-invert max-w-none {
+                    max-width: none;
+                }
+            `;
+            document.head.appendChild(style);
+        }
+    </script>
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E📞%3C/text%3E%3C/svg%3E" type="image/svg+xml">
     <!-- Tailwind CSS Configuration -->
     <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        dark: '#0a0a0a',
-                        primary: '#f97316',
-                        secondary: '#ef4444'
-                    },
-                    animation: {
-                        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
-                        'fade-in': 'fadeIn 0.5s ease-in-out'
-                    },
-                    keyframes: {
-                        fadeIn: {
-                            '0%': { opacity: '0', transform: 'translateY(20px)' },
-                            '100%': { opacity: '1', transform: 'translateY(0)' }
+        // 只在 tailwind 存在时配置
+        if (typeof tailwind !== 'undefined') {
+            tailwind.config = {
+                theme: {
+                    extend: {
+                        colors: {
+                            dark: '#0a0a0a',
+                            primary: '#f97316',
+                            secondary: '#ef4444'
+                        },
+                        animation: {
+                            'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                            'fade-in': 'fadeIn 0.5s ease-in-out'
+                        },
+                        keyframes: {
+                            fadeIn: {
+                                '0%': { opacity: '0', transform: 'translateY(20px)' },
+                                '100%': { opacity: '1', transform: 'translateY(0)' }
+                            }
                         }
                     }
                 }
-            }
+            };
         }
     </script>
     <style>
@@ -285,15 +576,21 @@
                 <h3 class="text-xl font-semibold mb-4 text-orange-500">Similar Services in Your Area</h3>
                 <ul class="space-y-3">
                     <li>
-                        <a href="luxury-salon-scripts-chicago-magmile.html" class="text-gray-300 hover:text-white transition-colors flex items-start">
+                        <a href="dental-specialist-chicago-scripts.html" class="text-gray-300 hover:text-white transition-colors flex items-start">
                             <span class="mr-2">→</span>
-                            <span>Magnificent Mile Stylists: Stop Losing $300 Extensions to Admin Friction</span>
+                            <span>Chicago Dental Specialists: Stop Ghosting $5k Implant Cases with Messy Follow-ups</span>
                         </a>
                     </li>
                     <li>
-                        <a href="tattoo-studio-booking-scripts-chicago.html" class="text-gray-300 hover:text-white transition-colors flex items-start">
+                        <a href="roofer-scripts-chicago-storm.html" class="text-gray-300 hover:text-white transition-colors flex items-start">
                             <span class="mr-2">→</span>
-                            <span>Chicago Tattoo Artists: Turn Frantic DMs into Guaranteed $200 Deposits</span>
+                            <span>Chicago Roofers: Don't Let Storm-Rush Admin Destroy Your $10k Insurance Leads</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="accounting-tax-scripts-chicago.html" class="text-gray-300 hover:text-white transition-colors flex items-start">
+                            <span class="mr-2">→</span>
+                            <span>Chicago CPAs: Stop Losing $2,500 Tax Retainers to 'Paper Note' Admin</span>
                         </a>
                     </li>
                     <li>
@@ -303,15 +600,9 @@
                         </a>
                     </li>
                     <li>
-                        <a href="gold-coast-salon-booking-chicago.html" class="text-gray-300 hover:text-white transition-colors flex items-start">
+                        <a href="landscaping-hardscape-scripts-chicago.html" class="text-gray-300 hover:text-white transition-colors flex items-start">
                             <span class="mr-2">→</span>
-                            <span>Gold Coast Stylists: Stop Losing $400 Extension Leads to Admin Friction</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="law-personal-injury-chicago-intake.html" class="text-gray-300 hover:text-white transition-colors flex items-start">
-                            <span class="mr-2">→</span>
-                            <span>Cook County Injury Lawyers: Is Your Admin Lag Triggering 'Firm-Hopping'?</span>
+                            <span>Chicago Landscapers: Turn Rough Field Notes into Signed $30k Contracts</span>
                         </a>
                     </li>
                 </ul>
@@ -328,15 +619,15 @@
                         </a>
                     </li>
                     <li>
-                        <a href="tax-accountant-london-deadline.html" class="text-gray-300 hover:text-white transition-colors flex items-start">
+                        <a href="endodontist-specialty-scripts-la.html" class="text-gray-300 hover:text-white transition-colors flex items-start">
                             <span class="mr-2">→</span>
-                            <span>London Accountants: Your January 'Note Chaos' is Triggering HMRC Audit Risks</span>
+                            <span>LA Endodontists: Is Your Sloppy Referral Admin Ghosting $3k Root Canal Cases?</span>
                         </a>
                     </li>
                     <li>
-                        <a href="veneer-consultation-nyc-manhattan.html" class="text-gray-300 hover:text-white transition-colors flex items-start">
+                        <a href="immigration-nurse-visa-scripts-sydney.html" class="text-gray-300 hover:text-white transition-colors flex items-start">
                             <span class="mr-2">→</span>
-                            <span>Manhattan Cosmetic Dentists: Why Your Messy Admin is Handing $20k Veneer Cases to DUMBO</span>
+                            <span>Sydney Immigration Lawyers: Your Admin Lag is Costing You Elite Healthcare Leads</span>
                         </a>
                     </li>
                     <li>
@@ -346,9 +637,9 @@
                         </a>
                     </li>
                     <li>
-                        <a href="cra-audit-accountant-toronto.html" class="text-gray-300 hover:text-white transition-colors flex items-start">
+                        <a href="veneer-consultation-nyc-manhattan.html" class="text-gray-300 hover:text-white transition-colors flex items-start">
                             <span class="mr-2">→</span>
-                            <span>GTA Accountants: Is Your Admin Lag Triggering CRA Compliance Red Flags?</span>
+                            <span>Manhattan Cosmetic Dentists: Why Your Messy Admin is Handing $20k Veneer Cases to DUMBO</span>
                         </a>
                     </li>
                 </ul>
@@ -421,12 +712,27 @@
         // Function to load data from keywords-data.json
         async function loadKeywordsData() {
             try {
-                const response = await fetch('keywords-data.json');
-                if (!response.ok) {
-                    throw new Error('Failed to load keywords data');
+                // 尝试从不同路径加载
+                const paths = ['../keywords-data.json', 'keywords-data.json'];
+                let loaded = false;
+                
+                for (const path of paths) {
+                    try {
+                        const response = await fetch(path);
+                        if (response.ok) {
+                            keywordsData = await response.json();
+                            loadData();
+                            loaded = true;
+                            break;
+                        }
+                    } catch (err) {
+                        console.warn(`Failed to load from ${path}:`, err);
+                    }
                 }
-                keywordsData = await response.json();
-                loadData();
+                
+                if (!loaded) {
+                    throw new Error('Failed to load keywords data from all paths');
+                }
             } catch (error) {
                 console.error('Error loading keywords data:', error);
                 // Use default data if loading fails
@@ -499,50 +805,68 @@
 
         // Function to load default data
         function loadDefaultData() {
-            document.getElementById('page-title').textContent = 'ReceptionKiller | Appointment Confirmation Software';
-            document.getElementById('page-description').setAttribute('content', 'Convert messy notes into professional booking confirmations and follow-up emails in seconds.');
-            document.getElementById('h1-title').textContent = 'Appointment Confirmation Software for Small Businesses';
-            document.getElementById('local-expert-insight').innerHTML = `
-                <h3>Small Business Market: 2026 Overview</h3>
-                <p>In 2026, small businesses across all industries are facing unique challenges and opportunities. The post-pandemic recovery has led to increased competition, while technological advancements have created new ways to streamline operations.</p>
-                <p>One of the most significant challenges small businesses face is managing appointments and reducing no-shows. Studies show that the average no-show rate across industries is 15-20%, resulting in significant revenue loss.</p>
-                <p>Our analysis indicates that businesses using automated appointment confirmation systems see a 60-70% reduction in no-shows, leading to increased revenue and improved customer satisfaction.</p>
-            `;
+            // 安全地访问 DOM 元素
+            const pageTitle = document.getElementById('page-title');
+            if (pageTitle) {
+                pageTitle.textContent = 'ReceptionKiller | Appointment Confirmation Software';
+            }
+            
+            const pageDescription = document.getElementById('page-description');
+            if (pageDescription) {
+                pageDescription.setAttribute('content', 'Convert messy notes into professional booking confirmations and follow-up emails in seconds.');
+            }
+            
+            const h1Title = document.getElementById('h1-title');
+            if (h1Title) {
+                h1Title.textContent = 'Appointment Confirmation Software for Small Businesses';
+            }
+            
+            const localExpertInsight = document.getElementById('local-expert-insight');
+            if (localExpertInsight) {
+                localExpertInsight.innerHTML = `
+                    <h3>Small Business Market: 2026 Overview</h3>
+                    <p>In 2026, small businesses across all industries are facing unique challenges and opportunities. The post-pandemic recovery has led to increased competition, while technological advancements have created new ways to streamline operations.</p>
+                    <p>One of the most significant challenges small businesses face is managing appointments and reducing no-shows. Studies show that the average no-show rate across industries is 15-20%, resulting in significant revenue loss.</p>
+                    <p>Our analysis indicates that businesses using automated appointment confirmation systems see a 60-70% reduction in no-shows, leading to increased revenue and improved customer satisfaction.</p>
+                `;
+            }
             
             // Default FAQ
             const faqSection = document.getElementById('faq-section');
-            faqSection.innerHTML = '';
-            const defaultFaq = [
-                {
-                    "question": "Is my client data safe?",
-                    "answer": "Yes, 100% browser-based processing. We never store or transmit your client data."
-                },
-                {
-                    "question": "Does this replace a receptionist?",
-                    "answer": "It empowers business owners to act like they have one, handling appointment confirmations and follow-ups automatically."
-                },
-                {
-                    "question": "What types of businesses benefit most from ReceptionKiller?",
-                    "answer": "ReceptionKiller is ideal for small businesses that rely on appointments, including dentists, hair salons, lawyers, medical practices, fitness studios, and consultants."
-                }
-            ];
-            
-            defaultFaq.forEach(faqItem => {
-                const faqDiv = document.createElement('div');
-                faqDiv.className = 'bg-gray-900 rounded-lg border border-gray-800';
-                faqDiv.innerHTML = `
-                    <details class="group">
-                        <summary class="p-4 cursor-pointer list-none flex justify-between items-center">
-                            <span class="font-semibold">${faqItem.question}</span>
-                            <span class="transition-transform duration-300 group-open:rotate-180">▼</span>
-                        </summary>
-                        <div class="p-4 pt-0 border-t border-gray-800">
-                            <p class="text-gray-300">${faqItem.answer}</p>
-                        </div>
-                    </details>
-                `;
-                faqSection.appendChild(faqDiv);
-            });
+            if (faqSection) {
+                faqSection.innerHTML = '';
+                const defaultFaq = [
+                    {
+                        "question": "Is my client data safe?",
+                        "answer": "Yes, 100% browser-based processing. We never store or transmit your client data."
+                    },
+                    {
+                        "question": "Does this replace a receptionist?",
+                        "answer": "It empowers business owners to act like they have one, handling appointment confirmations and follow-ups automatically."
+                    },
+                    {
+                        "question": "What types of businesses benefit most from ReceptionKiller?",
+                        "answer": "ReceptionKiller is ideal for small businesses that rely on appointments, including dentists, hair salons, lawyers, medical practices, fitness studios, and consultants."
+                    }
+                ];
+                
+                defaultFaq.forEach(faqItem => {
+                    const faqDiv = document.createElement('div');
+                    faqDiv.className = 'bg-gray-900 rounded-lg border border-gray-800';
+                    faqDiv.innerHTML = `
+                        <details class="group">
+                            <summary class="p-4 cursor-pointer list-none flex justify-between items-center">
+                                <span class="font-semibold">${faqItem.question}</span>
+                                <span class="transition-transform duration-300 group-open:rotate-180">▼</span>
+                            </summary>
+                            <div class="p-4 pt-0 border-t border-gray-800">
+                                <p class="text-gray-300">${faqItem.answer}</p>
+                            </div>
+                        </details>
+                    `;
+                    faqSection.appendChild(faqDiv);
+                });
+            }
         }
 
         // Function to calculate revenue leakage
@@ -556,17 +880,28 @@
                 industryAvgTicket = keywordsData[id].calculator_logic.industry_avg_ticket || 250;
             }
             
-            const avgTicket = parseInt(document.getElementById('avg-ticket').value) || industryAvgTicket;
-            const lostLeads = parseInt(document.getElementById('lost-leads').value) || 0;
+            // 安全地访问 DOM 元素
+            const avgTicketElement = document.getElementById('avg-ticket');
+            const lostLeadsElement = document.getElementById('lost-leads');
+            const avgTicketValueElement = document.getElementById('avg-ticket-value');
+            const lostLeadsValueElement = document.getElementById('lost-leads-value');
+            const annualLossElement = document.getElementById('annual-loss');
+            
+            if (!avgTicketElement || !lostLeadsElement || !avgTicketValueElement || !lostLeadsValueElement || !annualLossElement) {
+                console.warn('Calculator elements not found');
+                return;
+            }
+            
+            const avgTicket = parseInt(avgTicketElement.value) || industryAvgTicket;
+            const lostLeads = parseInt(lostLeadsElement.value) || 0;
             
             // Update display values
-            document.getElementById('avg-ticket-value').textContent = `${avgTicket.toLocaleString()}`;
-            document.getElementById('lost-leads-value').textContent = lostLeads;
+            avgTicketValueElement.textContent = `$${avgTicket.toLocaleString()}`;
+            lostLeadsValueElement.textContent = lostLeads;
             
             // Calculate annual revenue leakage
             const annualLoss = lostLeads * avgTicket * 52;
             
-            const annualLossElement = document.getElementById('annual-loss');
             annualLossElement.textContent = `${annualLoss.toLocaleString()}`;
             
             // Add visual effect if loss is over $50,000
@@ -589,9 +924,17 @@
                 industryAvgTicket = keywordsData[id].calculator_logic.industry_avg_ticket || 250;
             }
             
-            // Set initial values
-            document.getElementById('avg-ticket').value = industryAvgTicket;
-            document.getElementById('avg-ticket-value').textContent = `${industryAvgTicket.toLocaleString()}`;
+            // 安全地访问 DOM 元素
+            const avgTicketElement = document.getElementById('avg-ticket');
+            const avgTicketValueElement = document.getElementById('avg-ticket-value');
+            
+            if (avgTicketElement) {
+                avgTicketElement.value = industryAvgTicket;
+            }
+            
+            if (avgTicketValueElement) {
+                avgTicketValueElement.textContent = `$${industryAvgTicket.toLocaleString()}`;
+            }
             
             // Calculate initial loss
             calculateLeakage();
@@ -635,17 +978,28 @@
                 industryAvgTicket = keywordsData[id].calculator_logic.industry_avg_ticket || 250;
             }
             
-            const avgTicket = parseInt(document.getElementById('avg-ticket').value) || industryAvgTicket;
-            const lostLeads = parseInt(document.getElementById('lost-leads').value) || 0;
+            // 安全地访问 DOM 元素
+            const avgTicketElement = document.getElementById('avg-ticket');
+            const lostLeadsElement = document.getElementById('lost-leads');
+            const avgTicketValueElement = document.getElementById('avg-ticket-value');
+            const lostLeadsValueElement = document.getElementById('lost-leads-value');
+            const annualLossElement = document.getElementById('annual-loss');
+            
+            if (!avgTicketElement || !lostLeadsElement || !avgTicketValueElement || !lostLeadsValueElement || !annualLossElement) {
+                console.warn('Calculator elements not found');
+                return;
+            }
+            
+            const avgTicket = parseInt(avgTicketElement.value) || industryAvgTicket;
+            const lostLeads = parseInt(lostLeadsElement.value) || 0;
             
             // Update display values
-            document.getElementById('avg-ticket-value').textContent = `$${avgTicket.toLocaleString()}`;
-            document.getElementById('lost-leads-value').textContent = lostLeads;
+            avgTicketValueElement.textContent = `$${avgTicket.toLocaleString()}`;
+            lostLeadsValueElement.textContent = lostLeads;
             
             // Calculate annual revenue leakage
             const annualLoss = lostLeads * avgTicket * 52;
             
-            const annualLossElement = document.getElementById('annual-loss');
             annualLossElement.textContent = `$${annualLoss.toLocaleString()}`;
             
             // Add visual effect if loss is over $50,000
@@ -668,9 +1022,17 @@
                 industryAvgTicket = keywordsData[id].calculator_logic.industry_avg_ticket || 250;
             }
             
-            // Set initial values
-            document.getElementById('avg-ticket').value = industryAvgTicket;
-            document.getElementById('avg-ticket-value').textContent = `$${industryAvgTicket.toLocaleString()}`;
+            // 安全地访问 DOM 元素
+            const avgTicketElement = document.getElementById('avg-ticket');
+            const avgTicketValueElement = document.getElementById('avg-ticket-value');
+            
+            if (avgTicketElement) {
+                avgTicketElement.value = industryAvgTicket;
+            }
+            
+            if (avgTicketValueElement) {
+                avgTicketValueElement.textContent = `$${industryAvgTicket.toLocaleString()}`;
+            }
             
             // Calculate initial loss
             calculateLeakage();
