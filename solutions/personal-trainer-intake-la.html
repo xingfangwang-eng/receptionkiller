@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Venice & WeHo Trainers: Turn Instagram DMs into $1,200 Coaching Packages</title>
+    <meta name="description" content="undefined">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E📞%3C/text%3E%3C/svg%3E" type="image/svg+xml">
+    <!-- Tailwind CSS Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        dark: '#0a0a0a',
+                        primary: '#f97316',
+                        secondary: '#ef4444'
+                    },
+                    animation: {
+                        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'fade-in': 'fadeIn 0.5s ease-in-out'
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0', transform: 'translateY(20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .text-gradient {
+            background: linear-gradient(90deg, #f97316, #ef4444);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .glow {
+            box-shadow: 0 0 20px rgba(249, 115, 22, 0.5);
+        }
+        
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(249, 115, 22, 0.3);
+        }
+    </style>
+    <!-- JSON-LD Schema.org -->
+    <script type="application/ld+json" id="software-application-schema">
+        {
+            "@context": "https://schema.org",
+            "@type": "SoftwareApplication",
+            "name": "ReceptionKiller",
+            "applicationCategory": ["BusinessApplication", "ProductivityTool", "CustomerRelationshipManagement"],
+            "operatingSystem": "Web/Browser",
+            "offers": {
+                "@type": "Offer",
+                "price": "0.00",
+                "priceCurrency": "USD"
+            },
+            "featureList": [
+                "Instant Transcript Parsing",
+                "Professional SMS Generation",
+                "Automated Email Formatting",
+                "No Data Storage Privacy"
+            ],
+            "description": "Convert messy phone notes into professional booking confirmations and follow-up emails in seconds. No login, 100% private, built for small business owners like lawyers and clinics.",
+            "keywords": "appointment confirmation, lead follow-up, client retention, SMB productivity, administrative AI",
+            "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "4.9",
+                "reviewCount": "500+",
+                "bestRating": "5",
+                "worstRating": "1"
+            },
+            "provider": {
+                "@type": "Organization",
+                "name": "ReceptionKiller",
+                "url": "https://receptionkiller.com"
+            }
+        }
+    </script>
+    <script type="application/ld+json" id="faq-page-schema">
+        {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": []
+        }
+    </script>
+</head>
+<body class="bg-dark text-white min-h-screen flex flex-col">
+    <div class="max-w-6xl w-full mx-auto px-4 py-12">
+        <!-- Header Section -->
+        <header class="mb-16 text-center">
+            <h1 id="h1-title" class="text-[clamp(1.5rem,5vw,2.5rem)] font-bold mb-6 text-gradient">
+                Loading...
+            </h1>
+            <p class="text-[clamp(1rem,2vw,1.25rem)] text-gray-300 mb-8">
+                Loading...
+            </p>
+        </header>
+
+        <!-- Tool Section -->
+        <section class="mb-20">
+            <h2 class="text-2xl font-bold mb-8 text-center">Convert Messy Notes to Professional Bookings</h2>
+            <div class="bg-gray-900 p-8 rounded-lg border border-orange-500">
+                <textarea 
+                    class="w-full h-64 p-6 text-lg bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 mb-8 resize-none"
+                    placeholder="EXAMPLE: Mrs. Smith booked a haircut for tomorrow at 2pm, phone (555) 123-4567..."
+                    id="input-text"
+                ></textarea>
+                <button 
+                    class="w-full py-4 px-8 bg-orange-500 hover:bg-orange-600 text-white font-bold text-xl rounded-lg transition-colors animate-pulse-slow"
+                    onclick="generateScripts()"
+                >
+                    ACTIVATE NOW
+                </button>
+                <div class="flex justify-center mt-6 space-x-4">
+                    <div class="flex items-center">
+                        <span class="text-orange-500 mr-2">🛡️</span>
+                        <span class="text-sm text-gray-300">100% Private</span>
+                    </div>
+                    <div class="flex items-center">
+                        <span class="text-orange-500 mr-2">⚡</span>
+                        <span class="text-sm text-gray-300">Instant Processing</span>
+                    </div>
+                    <div class="flex items-center">
+                        <span class="text-orange-500 mr-2">🆓</span>
+                        <span class="text-sm text-gray-300">Always Free</span>
+                    </div>
+                </div>
+                <p class="text-center text-sm text-gray-400 mt-4">
+                    Used by 500+ independent contractors this month to save time.
+                </p>
+            </div>
+        </section>
+
+        <!-- Calculator Section -->
+        <section class="mb-20">
+            <h2 class="text-2xl font-bold mb-8 text-center">Revenue Leakage Estimator</h2>
+            <div class="bg-gray-900 p-8 rounded-lg border border-orange-500 card-hover">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div>
+                        <h3 class="text-xl font-semibold mb-4">Calculate Your Potential Loss</h3>
+                        <div class="space-y-8">
+                            <div>
+                                <label class="block text-gray-300 mb-2">Average Ticket Value ($)</label>
+                                <input type="range" id="avg-ticket" min="50" max="10000" step="50" value="250" class="w-full h-2 bg-gray-700 rounded-lg appearance-none cursor-pointer" oninput="calculateLeakage()">
+                                <div class="flex justify-between mt-2">
+                                    <span class="text-sm text-gray-400">$50</span>
+                                    <span id="avg-ticket-value" class="text-sm text-orange-500 font-semibold">$250</span>
+                                    <span class="text-sm text-gray-400">$10,000</span>
+                                </div>
+                            </div>
+                            <div>
+                                <label class="block text-gray-300 mb-2">Weekly Lost Leads</label>
+                                <input type="range" id="lost-leads" min="0" max="50" step="1" value="5" class="w-full h-2 bg-gray-700 rounded-lg appearance-none cursor-pointer" oninput="calculateLeakage()">
+                                <div class="flex justify-between mt-2">
+                                    <span class="text-sm text-gray-400">0</span>
+                                    <span id="lost-leads-value" class="text-sm text-orange-500 font-semibold">5</span>
+                                    <span class="text-sm text-gray-400">50</span>
+                                </div>
+                            </div>
+                            <button class="w-full py-3 bg-orange-500 hover:bg-orange-600 text-white font-bold rounded-lg transition-colors" onclick="calculateLeakage()">
+                                Calculate Loss
+                            </button>
+                        </div>
+                    </div>
+                    <div class="bg-gray-800 p-6 rounded-lg">
+                        <h3 class="text-xl font-semibold mb-4">Your Results</h3>
+                        <div class="space-y-4">
+                            <div>
+                                <p class="text-gray-300">Annual Revenue Loss</p>
+                                <p id="annual-loss" class="text-3xl font-bold text-orange-500">$65,000</p>
+                            </div>
+                            <div class="mt-6 p-4 bg-gray-700 rounded-lg">
+                                <p class="text-sm text-gray-300">
+                                    <strong>Pro Tip:</strong> Using ReceptionKiller can reduce lead leakage by up to 70%, potentially saving you thousands of dollars annually.
+                                </p>
+                                <button class="mt-4 w-full py-2 bg-orange-500 hover:bg-orange-600 text-white font-bold rounded-lg transition-colors" onclick="document.querySelector('textarea').focus()">
+                                    Try ReceptionKiller Now
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Table Section -->
+        <section class="mb-20">
+            <h2 class="text-2xl font-bold mb-8 text-center">Industry Comparison</h2>
+            <div class="overflow-x-auto">
+                <table class="w-full border-collapse">
+                    <thead>
+                        <tr class="bg-gray-800">
+                            <th class="p-4 text-left border-b border-gray-700">Industry</th>
+                            <th class="p-4 text-center border-b border-gray-700">No-Show Rate</th>
+                            <th class="p-4 text-center border-b border-gray-700">Avg. Appointment Value</th>
+                            <th class="p-4 text-center border-b border-gray-700">Monthly Loss</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="bg-gray-900 hover:bg-gray-800 transition-colors">
+                            <td class="p-4 border-b border-gray-800">Dentistry</td>
+                            <td class="p-4 text-center border-b border-gray-800">18%</td>
+                            <td class="p-4 text-center border-b border-gray-800">$250</td>
+                            <td class="p-4 text-center border-b border-gray-800 text-orange-500">$2,250</td>
+                        </tr>
+                        <tr class="bg-gray-900 hover:bg-gray-800 transition-colors">
+                            <td class="p-4 border-b border-gray-800">Hair Salon</td>
+                            <td class="p-4 text-center border-b border-gray-800">12%</td>
+                            <td class="p-4 text-center border-b border-gray-800">$80</td>
+                            <td class="p-4 text-center border-b border-gray-800 text-orange-500">$480</td>
+                        </tr>
+                        <tr class="bg-gray-900 hover:bg-gray-800 transition-colors">
+                            <td class="p-4 border-b border-gray-800">Legal</td>
+                            <td class="p-4 text-center border-b border-gray-800">20%</td>
+                            <td class="p-4 text-center border-b border-gray-800">$350</td>
+                            <td class="p-4 text-center border-b border-gray-800 text-orange-500">$3,500</td>
+                        </tr>
+                        <tr class="bg-gray-900 hover:bg-gray-800 transition-colors">
+                            <td class="p-4 border-b border-gray-800">Medical</td>
+                            <td class="p-4 text-center border-b border-gray-800">15%</td>
+                            <td class="p-4 text-center border-b border-gray-800">$150</td>
+                            <td class="p-4 text-center border-b border-gray-800 text-orange-500">$1,125</td>
+                        </tr>
+                        <tr class="bg-gray-900 hover:bg-gray-800 transition-colors">
+                            <td class="p-4 border-b border-gray-800">Fitness</td>
+                            <td class="p-4 text-center border-b border-gray-800">25%</td>
+                            <td class="p-4 text-center border-b border-gray-800">$60</td>
+                            <td class="p-4 text-center border-b border-gray-800 text-orange-500">$750</td>
+                        </tr>
+                        <tr class="bg-gray-900 hover:bg-gray-800 transition-colors">
+                            <td class="p-4 border-b border-gray-800">Consulting</td>
+                            <td class="p-4 text-center border-b border-gray-800">10%</td>
+                            <td class="p-4 text-center border-b border-gray-800">$400</td>
+                            <td class="p-4 text-center border-b border-gray-800 text-orange-500">$2,000</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Insight Section -->
+        <section class="mb-20">
+            <h2 class="text-2xl font-bold mb-8 text-center">2026 Local Market Audit</h2>
+            <div class="bg-gray-900 p-8 rounded-lg border border-orange-500">
+                <div id="local-expert-insight" class="prose prose-invert max-w-none">
+                    <p>Loading expert insight...</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="mb-20">
+            <h2 class="text-2xl font-bold mb-8 text-center">Frequently Asked Questions</h2>
+            <div class="space-y-4" id="faq-section">
+                <!-- FAQ items will be inserted here -->
+                <p>Loading FAQs...</p>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="mt-20 pt-8 border-t border-gray-800">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <p class="text-gray-400">Built for the Hustlers of 2026</p>
+                </div>
+                <div class="flex flex-col items-center md:items-end">
+                    <a href="https://www.wangdadi.xyz" class="text-orange-500 hover:text-orange-400 transition-colors mb-2">home</a>
+                    <p class="text-gray-400">Support: 457239850@qq.com</p>
+                </div>
+            </div>
+            <div class="mt-8">
+                <p class="text-sm text-gray-500 text-center">
+                    100% privacy secure: All processing is done locally in your browser. We don't store any of your information.
+                </p>
+            </div>
+            <div class="mt-4">
+                <p class="text-sm text-gray-500 text-center">
+                    <strong>About our AI Parsing Logic:</strong> Our tool uses advanced pattern recognition to extract key information from your notes, including names, dates, times, and contact information. The parsing happens entirely in your browser, ensuring your data remains private. The algorithm is designed to adapt to different input formats, making it flexible for various note-taking styles. We continuously improve our parsing logic based on user feedback to ensure the most accurate results.
+                </p>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        let keywordsData = {};
+
+        // Function to get URL parameter
+        function getUrlParameter(name) {
+            name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+            var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+            var results = regex.exec(location.search);
+            return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+        }
+
+        // Function to load data from keywords-data.json
+        async function loadKeywordsData() {
+            try {
+                const response = await fetch('keywords-data.json');
+                if (!response.ok) {
+                    throw new Error('Failed to load keywords data');
+                }
+                keywordsData = await response.json();
+                loadData();
+            } catch (error) {
+                console.error('Error loading keywords data:', error);
+                // Use default data if loading fails
+                loadDefaultData();
+            }
+        }
+
+        // Function to load data based on URL parameter
+        function loadData() {
+            const id = getUrlParameter('id');
+            if (id && keywordsData[id]) {
+                const data = keywordsData[id];
+                
+                // Update page title and description
+                document.getElementById('page-title').textContent = data.h1_title;
+                document.getElementById('page-description').setAttribute('content', data.description);
+                
+                // Update h1 title
+                document.getElementById('h1-title').textContent = data.h1_title;
+                
+                // Update local expert insight
+                document.getElementById('local-expert-insight').innerHTML = data.local_expert_insight;
+                
+                // Update FAQ section
+                const faqSection = document.getElementById('faq-section');
+                faqSection.innerHTML = '';
+                
+                // Update FAQ JSON-LD schema
+                const faqSchema = document.getElementById('faq-page-schema');
+                const faqSchemaData = {
+                    "@context": "https://schema.org",
+                    "@type": "FAQPage",
+                    "mainEntity": []
+                };
+                
+                data.faq.forEach(faqItem => {
+                    // Add to FAQ section
+                    const faqDiv = document.createElement('div');
+                    faqDiv.className = 'bg-gray-900 rounded-lg border border-gray-800';
+                    faqDiv.innerHTML = `
+                        <details class="group">
+                            <summary class="p-4 cursor-pointer list-none flex justify-between items-center">
+                                <span class="font-semibold">${faqItem.question}</span>
+                                <span class="transition-transform duration-300 group-open:rotate-180">▼</span>
+                            </summary>
+                            <div class="p-4 pt-0 border-t border-gray-800">
+                                <p class="text-gray-300">${faqItem.answer}</p>
+                            </div>
+                        </details>
+                    `;
+                    faqSection.appendChild(faqDiv);
+                    
+                    // Add to JSON-LD schema
+                    faqSchemaData.mainEntity.push({
+                        "@type": "Question",
+                        "name": faqItem.question,
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": faqItem.answer
+                        }
+                    });
+                });
+                
+                faqSchema.textContent = JSON.stringify(faqSchemaData, null, 2);
+            } else {
+                // Default data if no ID or ID not found
+                loadDefaultData();
+            }
+        }
+
+        // Function to load default data
+        function loadDefaultData() {
+            document.getElementById('page-title').textContent = 'ReceptionKiller | Appointment Confirmation Software';
+            document.getElementById('page-description').setAttribute('content', 'Convert messy notes into professional booking confirmations and follow-up emails in seconds.');
+            document.getElementById('h1-title').textContent = 'Appointment Confirmation Software for Small Businesses';
+            document.getElementById('local-expert-insight').innerHTML = `
+                <h3>Small Business Market: 2026 Overview</h3>
+                <p>In 2026, small businesses across all industries are facing unique challenges and opportunities. The post-pandemic recovery has led to increased competition, while technological advancements have created new ways to streamline operations.</p>
+                <p>One of the most significant challenges small businesses face is managing appointments and reducing no-shows. Studies show that the average no-show rate across industries is 15-20%, resulting in significant revenue loss.</p>
+                <p>Our analysis indicates that businesses using automated appointment confirmation systems see a 60-70% reduction in no-shows, leading to increased revenue and improved customer satisfaction.</p>
+            `;
+            
+            // Default FAQ
+            const faqSection = document.getElementById('faq-section');
+            faqSection.innerHTML = '';
+            const defaultFaq = [
+                {
+                    "question": "Is my client data safe?",
+                    "answer": "Yes, 100% browser-based processing. We never store or transmit your client data."
+                },
+                {
+                    "question": "Does this replace a receptionist?",
+                    "answer": "It empowers business owners to act like they have one, handling appointment confirmations and follow-ups automatically."
+                },
+                {
+                    "question": "What types of businesses benefit most from ReceptionKiller?",
+                    "answer": "ReceptionKiller is ideal for small businesses that rely on appointments, including dentists, hair salons, lawyers, medical practices, fitness studios, and consultants."
+                }
+            ];
+            
+            defaultFaq.forEach(faqItem => {
+                const faqDiv = document.createElement('div');
+                faqDiv.className = 'bg-gray-900 rounded-lg border border-gray-800';
+                faqDiv.innerHTML = `
+                    <details class="group">
+                        <summary class="p-4 cursor-pointer list-none flex justify-between items-center">
+                            <span class="font-semibold">${faqItem.question}</span>
+                            <span class="transition-transform duration-300 group-open:rotate-180">▼</span>
+                        </summary>
+                        <div class="p-4 pt-0 border-t border-gray-800">
+                            <p class="text-gray-300">${faqItem.answer}</p>
+                        </div>
+                    </details>
+                `;
+                faqSection.appendChild(faqDiv);
+            });
+        }
+
+        // Function to calculate revenue leakage
+        function calculateLeakage() {
+            const id = getUrlParameter('id');
+            let industryAvgTicket = 250; // Default value
+            
+            // Get industry average ticket from JSON data if available
+            if (id && keywordsData[id] && keywordsData[id].calculator_logic) {
+                industryAvgTicket = keywordsData[id].calculator_logic.industry_avg_ticket || 250;
+            }
+            
+            const avgTicket = parseInt(document.getElementById('avg-ticket').value) || industryAvgTicket;
+            const lostLeads = parseInt(document.getElementById('lost-leads').value) || 0;
+            
+            // Update display values
+            document.getElementById('avg-ticket-value').textContent = `$${avgTicket.toLocaleString()}`;
+            document.getElementById('lost-leads-value').textContent = lostLeads;
+            
+            // Calculate annual revenue leakage
+            const annualLoss = lostLeads * avgTicket * 52;
+            
+            const annualLossElement = document.getElementById('annual-loss');
+            annualLossElement.textContent = `$${annualLoss.toLocaleString()}`;
+            
+            // Add visual effect if loss is over $50,000
+            if (annualLoss > 50000) {
+                annualLossElement.classList.remove('text-orange-500');
+                annualLossElement.classList.add('text-red-500', 'animate-pulse');
+            } else {
+                annualLossElement.classList.remove('text-red-500', 'animate-pulse');
+                annualLossElement.classList.add('text-orange-500');
+            }
+        }
+
+        // Function to initialize calculator with industry data
+        function initCalculator() {
+            const id = getUrlParameter('id');
+            let industryAvgTicket = 250; // Default value
+            
+            // Get industry average ticket from JSON data if available
+            if (id && keywordsData[id] && keywordsData[id].calculator_logic) {
+                industryAvgTicket = keywordsData[id].calculator_logic.industry_avg_ticket || 250;
+            }
+            
+            // Set initial values
+            document.getElementById('avg-ticket').value = industryAvgTicket;
+            document.getElementById('avg-ticket-value').textContent = `$${industryAvgTicket.toLocaleString()}`;
+            
+            // Calculate initial loss
+            calculateLeakage();
+        }
+
+        // Function to generate scripts (simplified version)
+        function generateScripts() {
+            const inputText = document.getElementById('input-text').value;
+            if (!inputText) {
+                alert('Please enter some text to process.');
+                return;
+            }
+            
+            // Simplified parsing logic
+            const nameMatch = inputText.match(/(Mr\.|Mrs\.|Ms\.)?\s*([A-Za-z]+)/);
+            const name = nameMatch ? nameMatch[0] : 'Customer';
+            
+            const timeMatch = inputText.match(/(\d+:\d+|\d+\s*[ap]m|tomorrow|Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday)/i);
+            const time = timeMatch ? timeMatch[0] : 'your appointment';
+            
+            const serviceMatch = inputText.match(/(haircut|consultation|appointment|service|treatment)/i);
+            const service = serviceMatch ? serviceMatch[0] : 'service';
+            
+            // Show success message
+            alert(`Scripts generated for ${name} for ${service} at ${time}!`);
+        }
+
+        // Load data when page loads
+        window.addEventListener('DOMContentLoaded', async () => {
+            await loadKeywordsData();
+            initCalculator();
+        });
+    </script>
+</body>
+</html>
