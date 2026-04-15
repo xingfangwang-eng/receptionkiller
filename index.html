@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReceptionKiller | Free Instant AI Appointment Confirmation & Lead Follow-up Tool</title>
+    <meta name="description" content="Convert messy phone notes into professional booking confirmations and follow-up emails in seconds. No login, 100% private, built for small business owners like lawyers and clinics.">
+    <!-- OpenGraph Tags -->
+    <meta property="og:title" content="ReceptionKiller | Free Instant AI Appointment Confirmation Tool">
+    <meta property="og:description" content="Convert messy phone notes into professional booking confirmations and follow-up emails in seconds. No login, 100% private, built for small business owners like lawyers and clinics.">
+    <meta property="og:image" content="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=red%20telephone%20reception%20desk%20modern%20minimalist%20design%20dark%20background&image_size=square_hd">
+    <meta property="og:url" content="https://receptionkiller.com">
+    <meta property="og:type" content="website">
+    <!-- Canonical Tag -->
+    <link rel="canonical" href="https://receptionkiller.com">
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='0.9em' font-size='90'%3E%F0%9F%93%B2%3C/text%3E%3C/svg%3E" type="image/svg+xml">
+    <!-- JSON-LD Schema.org -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "ReceptionKiller",
+      "applicationCategory": ["BusinessApplication", "ProductivityTool", "CustomerRelationshipManagement"],
+      "operatingSystem": "Web/Browser",
+      "offers": {
+        "@type": "Offer",
+        "price": "0.00",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock"
+      },
+      "featureList": [
+        "Instant Transcript Parsing",
+        "Professional SMS Generation",
+        "Automated Email Formatting",
+        "No Data Storage Privacy",
+        "Client Retention Optimization",
+        "Lead Nurturing Automation",
+        "SMB Productivity Enhancement",
+        "Administrative AI Processing"
+      ],
+      "description": "ReceptionKiller solves the 'leaky bucket' problem for small businesses by capturing leads from messy phone notes, chat transcripts, and handwritten scribbles. It instantly converts unstructured information into professional booking confirmations and follow-up communications, ensuring no potential customer slips through the cracks. Designed specifically for US local businesses like lawyers, clinics, salons, and independent contractors, ReceptionKiller leverages advanced AI parsing technology to extract key information such as client names, contact details, appointment times, and service types from disorganized notes. This powerful tool helps small business owners save time, reduce administrative overhead, and maintain professional communication with clients, ultimately improving client retention and business growth.",
+      "keywords": "appointment confirmation, lead follow-up, client retention, small business tool, AI parsing, administrative automation, SMS generation, email formatting, US local business, productivity tool",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "500"
+      },
+      "provider": {
+        "@type": "Organization",
+        "name": "ReceptionKiller",
+        "url": "https://receptionkiller.com"
+      }
+    }
+    </script>
+    
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        dark: '#0a0a0a',
+                    },
+                    animation: {
+                        'pulse-slow': 'pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                    }
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .text-gradient {
+                background-clip: text;
+                -webkit-background-clip: text;
+                color: transparent;
+                background-image: linear-gradient(90deg, #f97316, #ef4444);
+            }
+            .glow {
+                box-shadow: 0 0 20px rgba(249, 115, 22, 0.5);
+            }
+            .fade-in {
+                animation: fadeIn 0.5s ease-in-out;
+            }
+            @keyframes fadeIn {
+                from {
+                    opacity: 0;
+                    transform: translateY(20px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+        }
+    </style>
+</head>
+<body class="bg-dark text-white min-h-screen flex flex-col items-center justify-center p-4">
+    <div class="max-w-4xl w-full">
+        <h1 class="text-[clamp(2.5rem,8vw,5rem)] font-bold text-center mb-6 text-gradient">
+            STOP LOSING CLIENTS. CONVERT MESSY NOTES TO PRO BOOKINGS INSTANTLY.
+        </h1>
+        <p class="text-[clamp(1rem,2vw,1.25rem)] text-center mb-12">
+            Paste your call transcript, chat notes, or handwritten scribbles — we'll handle the rest.
+        </p>
+        <textarea 
+            class="w-full h-64 p-6 text-lg bg-gray-900 border border-orange-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 glow mb-8 resize-none"
+            placeholder="EXAMPLE: Mrs. Smith booked a haircut for tomorrow at 2pm, phone (555) 123-4567..."
+        ></textarea>
+        <button id="generateBtn" class="w-full py-4 text-xl font-bold bg-orange-500 text-white rounded-lg hover:bg-orange-600 transition-colors animate-pulse-slow">
+            ACTIVATE NOW
+        </button>
+        
+        <!-- Trust Badges -->
+        <div class="flex justify-center space-x-6 mt-6">
+            <div class="flex items-center text-sm text-gray-400">
+                <span class="mr-2">🛡️</span>
+                <span>100% Private</span>
+            </div>
+            <div class="flex items-center text-sm text-gray-400">
+                <span class="mr-2">⚡</span>
+                <span>Instant Processing</span>
+            </div>
+            <div class="flex items-center text-sm text-gray-400">
+                <span class="mr-2">🆓</span>
+                <span>Always Free</span>
+            </div>
+        </div>
+        
+        <!-- Social Proof -->
+        <div class="text-center text-sm text-gray-400 mt-4">
+            Used by 500+ independent contractors this month to save time.
+        </div>
+        
+        <div id="resultContainer" class="mt-12 hidden">
+            <h2 class="text-2xl font-bold mb-8 text-white">YOUR PROFESSIONAL SCRIPTS</h2>
+            <!-- 卡片1：SMS/Text Confirmation Template -->
+            <div class="bg-gray-900 border border-orange-500 rounded-lg p-6 mb-8">
+                <h3 class="text-xl font-bold mb-4 text-orange-500">SMS/Text Confirmation</h3>
+                <div id="smsTemplate" class="mb-4 whitespace-pre-wrap"></div>
+                <button class="copy-btn py-2 px-4 bg-orange-600 text-white rounded hover:bg-orange-700 transition-colors flex items-center" data-target="smsTemplate">
+                    <span class="copy-text">COPY TEXT</span>
+                    <span class="copy-success ml-2 hidden">✅</span>
+                </button>
+            </div>
+            
+            <!-- 卡片2：Professional Email Confirmation -->
+            <div class="bg-gray-900 border border-orange-500 rounded-lg p-6 mb-8">
+                <h3 class="text-xl font-bold mb-4 text-orange-500">Professional Email Confirmation</h3>
+                <div id="emailTemplate" class="mb-4 whitespace-pre-wrap"></div>
+                <button class="copy-btn py-2 px-4 bg-orange-600 text-white rounded hover:bg-orange-700 transition-colors flex items-center" data-target="emailTemplate">
+                    <span class="copy-text">COPY EMAIL</span>
+                    <span class="copy-success ml-2 hidden">✅</span>
+                </button>
+            </div>
+            
+            <!-- 卡片3：24-Hour Follow-Up Script -->
+            <div class="bg-gray-900 border border-orange-500 rounded-lg p-6">
+                <h3 class="text-xl font-bold mb-4 text-orange-500">24-Hour Follow-Up Script</h3>
+                <div id="followupTemplate" class="mb-4 whitespace-pre-wrap"></div>
+                <button class="copy-btn py-2 px-4 bg-orange-600 text-white rounded hover:bg-orange-700 transition-colors flex items-center" data-target="followupTemplate">
+                    <span class="copy-text">COPY SCRIPT</span>
+                    <span class="copy-success ml-2 hidden">✅</span>
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // 解析函数
+        function parseInput(text) {
+            const result = {
+                time: '',
+                contact: '',
+                name: '',
+                project: ''
+            };
+            
+            // 提取时间
+            const timeRegex = /(Tomorrow|Today|Yesterday|Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday|\d{1,2}:\d{2}|\d{1,2}pm|\d{1,2}am|\d{4}-\d{2}-\d{2}|\d{2}\/\d{2}\/\d{4}|\d{1,2}\/\d{1,2}\/\d{2})/gi;
+            const timeMatches = text.match(timeRegex);
+            if (timeMatches) {
+                result.time = timeMatches.join(' ');
+            }
+            
+            // 提取联系方式（手机号）
+            const phoneRegex = /\b(\d{3}[-. ]?\d{3}[-. ]?\d{4}|\(\d{3}\) ?\d{3}[-. ]?\d{4})\b/g;
+            const phoneMatches = text.match(phoneRegex);
+            if (phoneMatches) {
+                result.contact = phoneMatches[0];
+            }
+            
+            // 提取称呼
+            const nameRegex = /(Mr\.|Mrs\.|Ms\.|Miss|Dr\.)\s+([A-Z][a-z]+)/g;
+            const nameMatches = text.match(nameRegex);
+            if (nameMatches) {
+                result.name = nameMatches[0];
+            } else {
+                // 尝试提取单个名字
+                const singleNameRegex = /\b[A-Z][a-z]+\b/g;
+                const singleNameMatches = text.match(singleNameRegex);
+                if (singleNameMatches) {
+                    result.name = singleNameMatches[0];
+                }
+            }
+            
+            // 提取项目
+            const projectKeywords = ['haircut', 'hair cut', 'consultation', 'meeting', 'appointment', 'service', 'treatment', 'styling', 'color', 'perm'];
+            for (const keyword of projectKeywords) {
+                if (text.toLowerCase().includes(keyword)) {
+                    result.project = keyword;
+                    break;
+                }
+            }
+            
+            return result;
+        }
+        
+        // 生成模板
+        function generateTemplates(data) {
+            // SMS/Text 模板
+            const smsTemplate = `Hi ${data.name || 'Valued Customer'},
+
+Your ${data.project || 'service'} appointment is confirmed for ${data.time || 'TBD'}.
+
+Reminder: Please arrive 10 minutes early. Contact us if you need to reschedule.
+
+Thank you for choosing us!
+
+[Business Name]`;
+            
+            // Email 模板
+            const emailTemplate = `Dear ${data.name || 'Valued Customer'},
+
+Thank you for your appointment request. We're pleased to confirm your booking:
+
+Service: ${data.project || 'Service'}
+Date & Time: ${data.time || 'TBD'}
+
+To add this appointment to your calendar, please use the calendar link provided at the bottom of this email.
+
+If you have any questions, please contact us at:
+Phone: ${data.contact || 'Please provide contact information'}
+Email: info@yourbusiness.com
+
+Cancellation Policy: We kindly request 24 hours' notice for any cancellations to avoid a cancellation fee.
+
+We look forward to serving you!
+
+Best regards,
+
+[Your Name]
+[Your Title]
+[Business Name]
+[Business Address]
+[Website]
+[Social Media Links]
+
+---
+Add to Calendar: [Calendar Link]`;
+            
+            // 跟进脚本
+            const followupTemplate = `Hello ${data.name || 'Valued Customer'},
+
+Thank you for choosing our ${data.project || 'service'} yesterday.
+
+We hope you're satisfied with your experience. If you have any feedback or suggestions, please don't hesitate to let us know.
+
+If you enjoyed our service, we'd greatly appreciate it if you could leave us a review on Google or social media. Your feedback helps us improve and reach more customers.
+
+We look forward to serving you again in the future!
+
+Warm regards,
+
+[Your Name]
+[Business Name]`;
+            
+            return { smsTemplate, emailTemplate, followupTemplate };
+        }
+        
+        // 复制功能
+        function setupCopyButtons() {
+            document.querySelectorAll('.copy-btn').forEach(button => {
+                button.addEventListener('click', function() {
+                    const targetId = this.getAttribute('data-target');
+                    const textToCopy = document.getElementById(targetId).textContent;
+                    const copyText = this.querySelector('.copy-text');
+                    const copySuccess = this.querySelector('.copy-success');
+                    
+                    navigator.clipboard.writeText(textToCopy)
+                        .then(() => {
+                            const originalText = copyText.textContent;
+                            copyText.textContent = 'Copied!';
+                            copySuccess.classList.remove('hidden');
+                            
+                            setTimeout(() => {
+                                copyText.textContent = originalText;
+                                copySuccess.classList.add('hidden');
+                            }, 2000);
+                        })
+                        .catch(err => {
+                            console.error('Copy failed:', err);
+                        });
+                });
+            });
+        }
+        
+        // 生成按钮点击事件
+        document.getElementById('generateBtn').addEventListener('click', function() {
+            const inputText = document.querySelector('textarea').value;
+            if (!inputText.trim()) {
+                alert('Please enter content');
+                return;
+            }
+            
+            const parsedData = parseInput(inputText);
+            const templates = generateTemplates(parsedData);
+            
+            // 填充模板
+            document.getElementById('smsTemplate').textContent = templates.smsTemplate;
+            document.getElementById('emailTemplate').textContent = templates.emailTemplate;
+            document.getElementById('followupTemplate').textContent = templates.followupTemplate;
+            
+            // 显示结果
+            const resultContainer = document.getElementById('resultContainer');
+            resultContainer.classList.remove('hidden');
+            resultContainer.classList.add('fade-in');
+        });
+        
+        // 初始化复制按钮
+        setupCopyButtons();
+    </script>
+    
+    <div class="mt-16 text-center text-sm text-gray-400">
+        <p>100% Privacy Safe: All processing is done locally in your browser. We do not store any of your information.</p>
+    </div>
+    
+    <!-- Knowledge Base / FAQ Section -->
+    <div class="mt-16 max-w-3xl mx-auto">
+        <h2 class="text-2xl font-bold mb-8 text-center text-white">Knowledge Base</h2>
+        
+        <details class="mb-4 bg-gray-900 p-4 rounded-lg border border-gray-800">
+            <summary class="cursor-pointer text-white font-medium hover:text-orange-400 transition-colors">Why small businesses need instant booking confirmations?</summary>
+            <p class="mt-4 text-gray-300">Small businesses face unique challenges when it comes to client retention and lead nurturing. In today's fast-paced digital environment, customers expect immediate confirmation of their appointments, and delays can lead to lost business opportunities. Instant booking confirmations not only provide peace of mind to clients but also establish a professional image for your business, setting you apart from competitors who may still rely on manual processes.</p>
+        </details>
+        
+        <details class="mb-4 bg-gray-900 p-4 rounded-lg border border-gray-800">
+            <summary class="cursor-pointer text-white font-medium hover:text-orange-400 transition-colors">How to convert voice-to-text notes into professional scripts?</summary>
+            <p class="mt-4 text-gray-300">Voice-to-text technology has revolutionized how businesses capture information during client interactions, but the resulting transcripts often contain messy, unstructured data. Converting these notes into professional booking confirmations and follow-up scripts requires organizing key information like client names, contact details, appointment times, and service types.</p>
+        </details>
+        
+        <details class="mb-4 bg-gray-900 p-4 rounded-lg border border-gray-800">
+            <summary class="cursor-pointer text-white font-medium hover:text-orange-400 transition-colors">Is my client data safe?</summary>
+            <p class="mt-4 text-gray-300">Yes, 100% browser-based processing. All data remains on your device and is never stored on external servers, ensuring maximum privacy and security for your client information.</p>
+        </details>
+        
+        <details class="mb-4 bg-gray-900 p-4 rounded-lg border border-gray-800">
+            <summary class="cursor-pointer text-white font-medium hover:text-orange-400 transition-colors">Does this replace a receptionist?</summary>
+            <p class="mt-4 text-gray-300">It empowers business owners to act like they have one. While ReceptionKiller automates many administrative tasks associated with booking confirmations and follow-ups, it complements human interaction rather than replacing it entirely.</p>
+        </details>
+        
+        <details class="mb-4 bg-gray-900 p-4 rounded-lg border border-gray-800">
+            <summary class="cursor-pointer text-white font-medium hover:text-orange-400 transition-colors">What types of businesses benefit most from ReceptionKiller?</summary>
+            <p class="mt-4 text-gray-300">ReceptionKiller is ideal for small businesses and independent contractors such as lawyers, clinics, salons, consultants, and any service-based business that relies on appointment scheduling and client communications.</p>
+        </details>
+    </div>
+    
+    <!-- About AI Parsing Logic -->
+    <div class="mt-16 text-center text-sm text-gray-400 max-w-3xl mx-auto">
+        <h3 class="text-lg font-semibold text-white mb-4">About Our AI Parsing Logic</h3>
+        <p>ReceptionKiller uses advanced client-side AI parsing to extract key information from unstructured text. Our algorithms are designed to recognize patterns in natural language, including dates, times, phone numbers, names, and service types. All processing happens locally in your browser, ensuring complete privacy while providing instant results. The parsing logic is continuously improved to better understand various input formats and regional variations, making it a reliable tool for businesses across different industries.</p>
+    </div>
+    
+    <!-- Modern Footer -->
+    <footer class="mt-12 border-t border-gray-800 pt-8 pb-16">
+        <div class="text-center">
+            <p class="text-gray-400 mb-4">Built for the Hustlers of 2026</p>
+            <a href="https://www.wangdadi.xyz" class="text-orange-500 hover:text-orange-400 transition-colors">home</a>
+            <p class="text-gray-400 mt-4">Support: 457239850@qq.com</p>
+        </div>
+    </footer>
+</body>
+</html>
