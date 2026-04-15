@@ -297,9 +297,9 @@
                         </a>
                     </li>
                     <li>
-                        <a href="specialist-dental-melbourne-cbd.html" class="text-gray-300 hover:text-white transition-colors flex items-start">
+                        <a href="pet-grooming-scripts-stkilda-melbourne.html" class="text-gray-300 hover:text-white transition-colors flex items-start">
                             <span class="mr-2">→</span>
-                            <span>Melbourne Orthodontists: Why Your Messy Referral Admin is Handing Invisalign Leads to the CBD</span>
+                            <span>St Kilda Pet Pros: Is Your 'NHS-Style' Admin Costing You Posh Poodle Leads?</span>
                         </a>
                     </li>
                     <li>
@@ -322,6 +322,18 @@
                 <h3 class="text-xl font-semibold mb-4 text-orange-500">Industry Insights Across Locations</h3>
                 <ul class="space-y-3">
                     <li>
+                        <a href="commercial-hvac-scripts-chicago-loop.html" class="text-gray-300 hover:text-white transition-colors flex items-start">
+                            <span class="mr-2">→</span>
+                            <span>Chicago Loop Facility Techs: Stop Losing $50k Service Contracts to 'Post-it' Admin</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="hvac-heat-pump-scripts-toronto.html" class="text-gray-300 hover:text-white transition-colors flex items-start">
+                            <span class="mr-2">→</span>
+                            <span>Toronto HVAC: Stop Losing $15k Heat Pump Installs to 'Messy Note' Syndrome</span>
+                        </a>
+                    </li>
+                    <li>
                         <a href="hvac-lead-capture-nyc.html" class="text-gray-300 hover:text-white transition-colors flex items-start">
                             <span class="mr-2">→</span>
                             <span>NYC HVAC Techs: Scrawling Job Notes on Scraps is Bleeding Your 2026 Bottom Line</span>
@@ -334,24 +346,39 @@
                         </a>
                     </li>
                     <li>
-                        <a href="hvac-energy-audit-scripts-sydney.html" class="text-gray-300 hover:text-white transition-colors flex items-start">
-                            <span class="mr-2">→</span>
-                            <span>Sydney HVAC Techs: Is Your 'Scrappy' Admin Missing Out on $15k Commercial Retrofits?</span>
-                        </a>
-                    </li>
-                    <li>
                         <a href="hvac-efficiency-scripts-london.html" class="text-gray-300 hover:text-white transition-colors flex items-start">
                             <span class="mr-2">→</span>
                             <span>London HVAC Engineers: Is the ULEZ Charge the Only Thing Eating Your 2026 Profits?</span>
                         </a>
                     </li>
-                    <li>
-                        <a href="commercial-hvac-nyc-service.html" class="text-gray-300 hover:text-white transition-colors flex items-start">
-                            <span class="mr-2">→</span>
-                            <span>Manhattan Building Techs: Stop Losing $50k Service Contracts to 'Post-it' Admin</span>
-                        </a>
-                    </li>
                 </ul>
+            </div>
+        </div>
+    </section>
+    <!-- Serving Areas -->
+    <section class="mt-16 bg-gray-900 rounded-lg p-8 border border-gray-800">
+        <h2 class="text-2xl font-bold mb-8 text-gradient">Serving Areas</h2>
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            <div class="bg-gray-800 p-4 rounded-lg text-center">
+                <span class="text-orange-500 font-semibold">Melbourne CBD</span>
+            </div>
+            <div class="bg-gray-800 p-4 rounded-lg text-center">
+                <span class="text-orange-500 font-semibold">South Yarra</span>
+            </div>
+            <div class="bg-gray-800 p-4 rounded-lg text-center">
+                <span class="text-orange-500 font-semibold">St Kilda</span>
+            </div>
+            <div class="bg-gray-800 p-4 rounded-lg text-center">
+                <span class="text-orange-500 font-semibold">Fitzroy</span>
+            </div>
+            <div class="bg-gray-800 p-4 rounded-lg text-center">
+                <span class="text-orange-500 font-semibold">Carlton</span>
+            </div>
+            <div class="bg-gray-800 p-4 rounded-lg text-center">
+                <span class="text-orange-500 font-semibold">Geelong</span>
+            </div>
+            <div class="bg-gray-800 p-4 rounded-lg text-center">
+                <span class="text-orange-500 font-semibold">Ballarat</span>
             </div>
         </div>
     </section>
@@ -520,6 +547,86 @@
 
         // Function to calculate revenue leakage
         function calculateLeakage() {
+            const currencySymbol = 'A
+            const id = getUrlParameter('id');
+            let industryAvgTicket = 250; // Default value
+            
+            // Get industry average ticket from JSON data if available
+            if (id && keywordsData[id] && keywordsData[id].calculator_logic) {
+                industryAvgTicket = keywordsData[id].calculator_logic.industry_avg_ticket || 250;
+            }
+            
+            const avgTicket = parseInt(document.getElementById('avg-ticket').value) || industryAvgTicket;
+            const lostLeads = parseInt(document.getElementById('lost-leads').value) || 0;
+            
+            // Update display values
+            document.getElementById('avg-ticket-value').textContent = `A${avgTicket.toLocaleString()}`;
+            document.getElementById('lost-leads-value').textContent = lostLeads;
+            
+            // Calculate annual revenue leakage
+            const annualLoss = lostLeads * avgTicket * 52;
+            
+            const annualLossElement = document.getElementById('annual-loss');
+            annualLossElement.textContent = `A${annualLoss.toLocaleString()}`;
+            
+            // Add visual effect if loss is over $50,000
+            if (annualLoss > 50000) {
+                annualLossElement.classList.remove('text-orange-500');
+                annualLossElement.classList.add('text-red-500', 'animate-pulse');
+            } else {
+                annualLossElement.classList.remove('text-red-500', 'animate-pulse');
+                annualLossElement.classList.add('text-orange-500');
+            }
+        }
+
+        // Function to initialize calculator with industry data
+        function initCalculator() {
+            const id = getUrlParameter('id');
+            let industryAvgTicket = 250; // Default value
+            
+            // Get industry average ticket from JSON data if available
+            if (id && keywordsData[id] && keywordsData[id].calculator_logic) {
+                industryAvgTicket = keywordsData[id].calculator_logic.industry_avg_ticket || 250;
+            }
+            
+            // Set initial values
+            document.getElementById('avg-ticket').value = industryAvgTicket;
+            document.getElementById('avg-ticket-value').textContent = `A${industryAvgTicket.toLocaleString()}`;
+            
+            // Calculate initial loss
+            calculateLeakage();
+        }
+
+        // Function to generate scripts (simplified version)
+        function generateScripts() {
+            const inputText = document.getElementById('input-text').value;
+            if (!inputText) {
+                alert('Please enter some text to process.');
+                return;
+            }
+            
+            // Simplified parsing logic
+            const nameMatch = inputText.match(/(Mr\.|Mrs\.|Ms\.)?\s*([A-Za-z]+)/);
+            const name = nameMatch ? nameMatch[0] : 'Customer';
+            
+            const timeMatch = inputText.match(/(\d+:\d+|\d+\s*[ap]m|tomorrow|Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday)/i);
+            const time = timeMatch ? timeMatch[0] : 'your appointment';
+            
+            const serviceMatch = inputText.match(/(haircut|consultation|appointment|service|treatment)/i);
+            const service = serviceMatch ? serviceMatch[0] : 'service';
+            
+            // Show success message
+            alert(`Scripts generated for ${name} for ${service} at ${time}!`);
+        }
+
+        // Load data when page loads
+        window.addEventListener('DOMContentLoaded', async () => {
+            await loadKeywordsData();
+            initCalculator();
+        });
+    </script>
+</body>
+</html>;
             const id = getUrlParameter('id');
             let industryAvgTicket = 250; // Default value
             

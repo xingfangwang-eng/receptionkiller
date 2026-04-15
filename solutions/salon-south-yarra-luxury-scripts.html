@@ -304,15 +304,15 @@
                 <h3 class="text-xl font-semibold mb-4 text-orange-500">Industry Insights Across Locations</h3>
                 <ul class="space-y-3">
                     <li>
-                        <a href="gold-coast-salon-booking-chicago.html" class="text-gray-300 hover:text-white transition-colors flex items-start">
-                            <span class="mr-2">→</span>
-                            <span>Gold Coast Stylists: Stop Losing $400 Extension Leads to Admin Friction</span>
-                        </a>
-                    </li>
-                    <li>
                         <a href="luxury-salon-scripts-chicago-magmile.html" class="text-gray-300 hover:text-white transition-colors flex items-start">
                             <span class="mr-2">→</span>
                             <span>Magnificent Mile Stylists: Stop Losing $300 Extensions to Admin Friction</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="gold-coast-salon-booking-chicago.html" class="text-gray-300 hover:text-white transition-colors flex items-start">
+                            <span class="mr-2">→</span>
+                            <span>Gold Coast Stylists: Stop Losing $400 Extension Leads to Admin Friction</span>
                         </a>
                     </li>
                 </ul>
@@ -484,6 +484,86 @@
 
         // Function to calculate revenue leakage
         function calculateLeakage() {
+            const currencySymbol = '
+            const id = getUrlParameter('id');
+            let industryAvgTicket = 250; // Default value
+            
+            // Get industry average ticket from JSON data if available
+            if (id && keywordsData[id] && keywordsData[id].calculator_logic) {
+                industryAvgTicket = keywordsData[id].calculator_logic.industry_avg_ticket || 250;
+            }
+            
+            const avgTicket = parseInt(document.getElementById('avg-ticket').value) || industryAvgTicket;
+            const lostLeads = parseInt(document.getElementById('lost-leads').value) || 0;
+            
+            // Update display values
+            document.getElementById('avg-ticket-value').textContent = `${avgTicket.toLocaleString()}`;
+            document.getElementById('lost-leads-value').textContent = lostLeads;
+            
+            // Calculate annual revenue leakage
+            const annualLoss = lostLeads * avgTicket * 52;
+            
+            const annualLossElement = document.getElementById('annual-loss');
+            annualLossElement.textContent = `${annualLoss.toLocaleString()}`;
+            
+            // Add visual effect if loss is over $50,000
+            if (annualLoss > 50000) {
+                annualLossElement.classList.remove('text-orange-500');
+                annualLossElement.classList.add('text-red-500', 'animate-pulse');
+            } else {
+                annualLossElement.classList.remove('text-red-500', 'animate-pulse');
+                annualLossElement.classList.add('text-orange-500');
+            }
+        }
+
+        // Function to initialize calculator with industry data
+        function initCalculator() {
+            const id = getUrlParameter('id');
+            let industryAvgTicket = 250; // Default value
+            
+            // Get industry average ticket from JSON data if available
+            if (id && keywordsData[id] && keywordsData[id].calculator_logic) {
+                industryAvgTicket = keywordsData[id].calculator_logic.industry_avg_ticket || 250;
+            }
+            
+            // Set initial values
+            document.getElementById('avg-ticket').value = industryAvgTicket;
+            document.getElementById('avg-ticket-value').textContent = `${industryAvgTicket.toLocaleString()}`;
+            
+            // Calculate initial loss
+            calculateLeakage();
+        }
+
+        // Function to generate scripts (simplified version)
+        function generateScripts() {
+            const inputText = document.getElementById('input-text').value;
+            if (!inputText) {
+                alert('Please enter some text to process.');
+                return;
+            }
+            
+            // Simplified parsing logic
+            const nameMatch = inputText.match(/(Mr\.|Mrs\.|Ms\.)?\s*([A-Za-z]+)/);
+            const name = nameMatch ? nameMatch[0] : 'Customer';
+            
+            const timeMatch = inputText.match(/(\d+:\d+|\d+\s*[ap]m|tomorrow|Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday)/i);
+            const time = timeMatch ? timeMatch[0] : 'your appointment';
+            
+            const serviceMatch = inputText.match(/(haircut|consultation|appointment|service|treatment)/i);
+            const service = serviceMatch ? serviceMatch[0] : 'service';
+            
+            // Show success message
+            alert(`Scripts generated for ${name} for ${service} at ${time}!`);
+        }
+
+        // Load data when page loads
+        window.addEventListener('DOMContentLoaded', async () => {
+            await loadKeywordsData();
+            initCalculator();
+        });
+    </script>
+</body>
+</html>;
             const id = getUrlParameter('id');
             let industryAvgTicket = 250; // Default value
             

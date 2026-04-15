@@ -285,15 +285,15 @@
                 <h3 class="text-xl font-semibold mb-4 text-orange-500">Similar Services in Your Area</h3>
                 <ul class="space-y-3">
                     <li>
-                        <a href="lawyer-intake-scripts-london.html" class="text-gray-300 hover:text-white transition-colors flex items-start">
+                        <a href="immigration-law-scripts-london-shoreditch.html" class="text-gray-300 hover:text-white transition-colors flex items-start">
                             <span class="mr-2">→</span>
-                            <span>London Solicitors: Your 11 PM WhatsApp Client Follow-ups are a Malpractice Risk</span>
+                            <span>Shoreditch Tech Hub Lawyers: Is Your Admin Lag Triggering Home Office Rejections?</span>
                         </a>
                     </li>
                     <li>
-                        <a href="hvac-efficiency-scripts-london.html" class="text-gray-300 hover:text-white transition-colors flex items-start">
+                        <a href="lawyer-intake-scripts-london.html" class="text-gray-300 hover:text-white transition-colors flex items-start">
                             <span class="mr-2">→</span>
-                            <span>London HVAC Engineers: Is the ULEZ Charge the Only Thing Eating Your 2026 Profits?</span>
+                            <span>London Solicitors: Your 11 PM WhatsApp Client Follow-ups are a Malpractice Risk</span>
                         </a>
                     </li>
                     <li>
@@ -303,15 +303,15 @@
                         </a>
                     </li>
                     <li>
-                        <a href="dental-private-scripts-london.html" class="text-gray-300 hover:text-white transition-colors flex items-start">
+                        <a href="immigration-law-scripts-london.html" class="text-gray-300 hover:text-white transition-colors flex items-start">
                             <span class="mr-2">→</span>
-                            <span>Harley Street & Richmond Clinics: Turn Messy Notes into 5-Star Patient Journeys</span>
+                            <span>London Immigration Solicitors: Is Your Administrative Lag Triggering Home Office Risks?</span>
                         </a>
                     </li>
                     <li>
-                        <a href="soho-tattoo-deposit-scripts-london.html" class="text-gray-300 hover:text-white transition-colors flex items-start">
+                        <a href="hvac-efficiency-scripts-london.html" class="text-gray-300 hover:text-white transition-colors flex items-start">
                             <span class="mr-2">→</span>
-                            <span>Soho Studio Artists: Is Your 'Insta-Admin' Costing You £1,500 Full-Day Sessions?</span>
+                            <span>London HVAC Engineers: Is the ULEZ Charge the Only Thing Eating Your 2026 Profits?</span>
                         </a>
                     </li>
                 </ul>
@@ -328,6 +328,36 @@
                         </a>
                     </li>
                 </ul>
+            </div>
+        </div>
+    </section>
+    <!-- Serving Areas -->
+    <section class="mt-16 bg-gray-900 rounded-lg p-8 border border-gray-800">
+        <h2 class="text-2xl font-bold mb-8 text-gradient">Serving Areas</h2>
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            <div class="bg-gray-800 p-4 rounded-lg text-center">
+                <span class="text-orange-500 font-semibold">City of London</span>
+            </div>
+            <div class="bg-gray-800 p-4 rounded-lg text-center">
+                <span class="text-orange-500 font-semibold">Westminster</span>
+            </div>
+            <div class="bg-gray-800 p-4 rounded-lg text-center">
+                <span class="text-orange-500 font-semibold">Kensington and Chelsea</span>
+            </div>
+            <div class="bg-gray-800 p-4 rounded-lg text-center">
+                <span class="text-orange-500 font-semibold">Hammersmith and Fulham</span>
+            </div>
+            <div class="bg-gray-800 p-4 rounded-lg text-center">
+                <span class="text-orange-500 font-semibold">Wandsworth</span>
+            </div>
+            <div class="bg-gray-800 p-4 rounded-lg text-center">
+                <span class="text-orange-500 font-semibold">Lambeth</span>
+            </div>
+            <div class="bg-gray-800 p-4 rounded-lg text-center">
+                <span class="text-orange-500 font-semibold">Southwark</span>
+            </div>
+            <div class="bg-gray-800 p-4 rounded-lg text-center">
+                <span class="text-orange-500 font-semibold">Tower Hamlets</span>
             </div>
         </div>
     </section>
@@ -496,6 +526,7 @@
 
         // Function to calculate revenue leakage
         function calculateLeakage() {
+            const currencySymbol = '£';
             const id = getUrlParameter('id');
             let industryAvgTicket = 250; // Default value
             
@@ -508,14 +539,14 @@
             const lostLeads = parseInt(document.getElementById('lost-leads').value) || 0;
             
             // Update display values
-            document.getElementById('avg-ticket-value').textContent = `$${avgTicket.toLocaleString()}`;
+            document.getElementById('avg-ticket-value').textContent = `£${avgTicket.toLocaleString()}`;
             document.getElementById('lost-leads-value').textContent = lostLeads;
             
             // Calculate annual revenue leakage
             const annualLoss = lostLeads * avgTicket * 52;
             
             const annualLossElement = document.getElementById('annual-loss');
-            annualLossElement.textContent = `$${annualLoss.toLocaleString()}`;
+            annualLossElement.textContent = `£${annualLoss.toLocaleString()}`;
             
             // Add visual effect if loss is over $50,000
             if (annualLoss > 50000) {
@@ -539,7 +570,7 @@
             
             // Set initial values
             document.getElementById('avg-ticket').value = industryAvgTicket;
-            document.getElementById('avg-ticket-value').textContent = `$${industryAvgTicket.toLocaleString()}`;
+            document.getElementById('avg-ticket-value').textContent = `£${industryAvgTicket.toLocaleString()}`;
             
             // Calculate initial loss
             calculateLeakage();
