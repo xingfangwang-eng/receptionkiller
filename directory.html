@@ -47,13 +47,34 @@
 <body class="bg-dark text-white min-h-screen">
     <div class="max-w-6xl w-full mx-auto px-4 py-12">
         <!-- Header -->
-        <header class="mb-16 text-center">
-            <h1 class="text-[clamp(1.5rem,5vw,2.5rem)] font-bold mb-6 text-gradient">
-                Business Audit Directory
-            </h1>
-            <p class="text-[clamp(1rem,2vw,1.25rem)] text-gray-300 mb-8">
-                Explore our comprehensive directory of business audits by city and industry
-            </p>
+        <header class="mb-16">
+            <!-- Breadcrumb Navigation -->
+            <div class="mb-8 text-left">
+                <nav class="flex" aria-label="Breadcrumb">
+                    <ol class="inline-flex items-center space-x-1 md:space-x-3">
+                        <li class="inline-flex items-center">
+                            <a href="index.html" class="text-gray-400 hover:text-orange-500 transition-colors">
+                                <span class="mr-2">🏠</span> Home
+                            </a>
+                        </li>
+                        <li aria-current="page">
+                            <div class="flex items-center">
+                                <span class="mx-2 text-gray-500">/</span>
+                                <span class="text-gray-300">Directory</span>
+                            </div>
+                        </li>
+                    </ol>
+                </nav>
+            </div>
+            
+            <div class="text-center">
+                <h1 class="text-[clamp(1.5rem,5vw,2.5rem)] font-bold mb-6 text-gradient">
+                    Business Audit Directory
+                </h1>
+                <p class="text-[clamp(1rem,2vw,1.25rem)] text-gray-300 mb-8">
+                    Explore our comprehensive directory of business audits by city and industry
+                </p>
+            </div>
         </header>
 
         <!-- City Categories -->
