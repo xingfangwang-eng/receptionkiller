@@ -154,18 +154,24 @@
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                     <div>
                         <h3 class="text-xl font-semibold mb-4">Calculate Your Potential Loss</h3>
-                        <div class="space-y-4">
+                        <div class="space-y-8">
                             <div>
-                                <label class="block text-gray-300 mb-2">Monthly Appointments</label>
-                                <input type="number" id="appointments" class="w-full p-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500" value="50">
+                                <label class="block text-gray-300 mb-2">Average Ticket Value ($)</label>
+                                <input type="range" id="avg-ticket" min="50" max="10000" step="50" value="250" class="w-full h-2 bg-gray-700 rounded-lg appearance-none cursor-pointer" oninput="calculateLeakage()">
+                                <div class="flex justify-between mt-2">
+                                    <span class="text-sm text-gray-400">$50</span>
+                                    <span id="avg-ticket-value" class="text-sm text-orange-500 font-semibold">$250</span>
+                                    <span class="text-sm text-gray-400">$10,000</span>
+                                </div>
                             </div>
                             <div>
-                                <label class="block text-gray-300 mb-2">Average Appointment Value ($)</label>
-                                <input type="number" id="appointment-value" class="w-full p-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500" value="100">
-                            </div>
-                            <div>
-                                <label class="block text-gray-300 mb-2">No-Show Rate (%)</label>
-                                <input type="number" id="no-show-rate" class="w-full p-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500" value="15">
+                                <label class="block text-gray-300 mb-2">Weekly Lost Leads</label>
+                                <input type="range" id="lost-leads" min="0" max="50" step="1" value="5" class="w-full h-2 bg-gray-700 rounded-lg appearance-none cursor-pointer" oninput="calculateLeakage()">
+                                <div class="flex justify-between mt-2">
+                                    <span class="text-sm text-gray-400">0</span>
+                                    <span id="lost-leads-value" class="text-sm text-orange-500 font-semibold">5</span>
+                                    <span class="text-sm text-gray-400">50</span>
+                                </div>
                             </div>
                             <button class="w-full py-3 bg-orange-500 hover:bg-orange-600 text-white font-bold rounded-lg transition-colors" onclick="calculateLeakage()">
                                 Calculate Loss
@@ -176,17 +182,16 @@
                         <h3 class="text-xl font-semibold mb-4">Your Results</h3>
                         <div class="space-y-4">
                             <div>
-                                <p class="text-gray-300">Monthly Revenue Loss</p>
-                                <p id="monthly-loss" class="text-2xl font-bold text-orange-500">$750</p>
-                            </div>
-                            <div>
                                 <p class="text-gray-300">Annual Revenue Loss</p>
-                                <p id="annual-loss" class="text-2xl font-bold text-orange-500">$9,000</p>
+                                <p id="annual-loss" class="text-3xl font-bold text-orange-500">$65,000</p>
                             </div>
                             <div class="mt-6 p-4 bg-gray-700 rounded-lg">
                                 <p class="text-sm text-gray-300">
-                                    <strong>Pro Tip:</strong> Using ReceptionKiller can reduce no-shows by up to 70%, potentially saving you thousands of dollars annually.
+                                    <strong>Pro Tip:</strong> Using ReceptionKiller can reduce lead leakage by up to 70%, potentially saving you thousands of dollars annually.
                                 </p>
+                                <button class="mt-4 w-full py-2 bg-orange-500 hover:bg-orange-600 text-white font-bold rounded-lg transition-colors" onclick="document.querySelector('textarea').focus()">
+                                    Try ReceptionKiller Now
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -432,15 +437,53 @@
 
         // Function to calculate revenue leakage
         function calculateLeakage() {
-            const appointments = parseInt(document.getElementById('appointments').value) || 0;
-            const appointmentValue = parseInt(document.getElementById('appointment-value').value) || 0;
-            const noShowRate = parseInt(document.getElementById('no-show-rate').value) || 0;
+            const id = getUrlParameter('id');
+            let industryAvgTicket = 250; // Default value
             
-            const monthlyLoss = (appointments * appointmentValue * noShowRate) / 100;
-            const annualLoss = monthlyLoss * 12;
+            // Get industry average ticket from JSON data if available
+            if (id && keywordsData[id] && keywordsData[id].calculator_logic) {
+                industryAvgTicket = keywordsData[id].calculator_logic.industry_avg_ticket || 250;
+            }
             
-            document.getElementById('monthly-loss').textContent = `$${monthlyLoss.toLocaleString()}`;
-            document.getElementById('annual-loss').textContent = `$${annualLoss.toLocaleString()}`;
+            const avgTicket = parseInt(document.getElementById('avg-ticket').value) || industryAvgTicket;
+            const lostLeads = parseInt(document.getElementById('lost-leads').value) || 0;
+            
+            // Update display values
+            document.getElementById('avg-ticket-value').textContent = `$${avgTicket.toLocaleString()}`;
+            document.getElementById('lost-leads-value').textContent = lostLeads;
+            
+            // Calculate annual revenue leakage
+            const annualLoss = lostLeads * avgTicket * 52;
+            
+            const annualLossElement = document.getElementById('annual-loss');
+            annualLossElement.textContent = `$${annualLoss.toLocaleString()}`;
+            
+            // Add visual effect if loss is over $50,000
+            if (annualLoss > 50000) {
+                annualLossElement.classList.remove('text-orange-500');
+                annualLossElement.classList.add('text-red-500', 'animate-pulse');
+            } else {
+                annualLossElement.classList.remove('text-red-500', 'animate-pulse');
+                annualLossElement.classList.add('text-orange-500');
+            }
+        }
+
+        // Function to initialize calculator with industry data
+        function initCalculator() {
+            const id = getUrlParameter('id');
+            let industryAvgTicket = 250; // Default value
+            
+            // Get industry average ticket from JSON data if available
+            if (id && keywordsData[id] && keywordsData[id].calculator_logic) {
+                industryAvgTicket = keywordsData[id].calculator_logic.industry_avg_ticket || 250;
+            }
+            
+            // Set initial values
+            document.getElementById('avg-ticket').value = industryAvgTicket;
+            document.getElementById('avg-ticket-value').textContent = `$${industryAvgTicket.toLocaleString()}`;
+            
+            // Calculate initial loss
+            calculateLeakage();
         }
 
         // Function to generate scripts (simplified version)
@@ -466,7 +509,10 @@
         }
 
         // Load data when page loads
-        window.addEventListener('DOMContentLoaded', loadKeywordsData);
+        window.addEventListener('DOMContentLoaded', async () => {
+            await loadKeywordsData();
+            initCalculator();
+        });
     </script>
 </body>
 </html>
