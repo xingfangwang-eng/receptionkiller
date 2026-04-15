@@ -402,14 +402,37 @@
 <body class="bg-dark text-white min-h-screen flex flex-col">
     <div class="max-w-6xl w-full mx-auto px-4 py-12">
         <!-- Header Section -->
-        <header class="mb-16 text-center">
+        <header class="mb-16">
+            <!-- Breadcrumb Navigation -->
+            <div class="mb-8 text-left">
+                <nav class="flex" aria-label="Breadcrumb">
+                    <ol class="inline-flex items-center space-x-1 md:space-x-3">
+                        <li class="inline-flex items-center">
+                            <a href="../index.html" class="text-gray-400 hover:text-orange-500 transition-colors">
+                                <span class="mr-2">🏠</span> Home
+                            </a>
+                        </li>
+                        <li>
+                            <div class="flex items-center">
+                                <span class="mx-2 text-gray-500">/</span>
+                                <a href="../directory.html" class="text-gray-400 hover:text-orange-500 transition-colors">Directory</a>
+                            </div>
+                        </li>
+                        <li aria-current="page">
+                            <div class="flex items-center">
+                                <span class="mx-2 text-gray-500">/</span>
+                                <span class="text-gray-300">Solution</span>
+                            </div>
+                        </li>
+                    </ol>
+                </nav>
+            </div>
+            
             <div class="mb-8"><a href="../directory.html" class="text-orange-500 hover:text-orange-400 transition-colors flex items-center"><span class="mr-2">←</span> Back to Directory</a></div>
-            <h1 id="h1-title" class="text-[clamp(1.5rem,5vw,2.5rem)] font-bold mb-6 text-gradient">
+            <h1 id="h1-title" class="text-[clamp(1.5rem,5vw,2.5rem)] font-bold mb-6 text-gradient text-center">
                 Loading...
             </h1>
-            <p class="text-[clamp(1rem,2vw,1.25rem)] text-gray-300 mb-8">
-                Loading...
-            </p>
+
         </header>
 
         <!-- Tool Section -->
@@ -584,9 +607,15 @@
                 <h3 class="text-xl font-semibold mb-4 text-orange-500">Similar Services in Your Area</h3>
                 <ul class="space-y-3">
                     <li>
-                        <a href="law-personal-injury-chicago-intake.html" class="text-gray-300 hover:text-white transition-colors flex items-start">
+                        <a href="emergency-plumber-scripts-chicago.html" class="text-gray-300 hover:text-white transition-colors flex items-start">
                             <span class="mr-2">→</span>
-                            <span>Cook County Injury Lawyers: Is Your Admin Lag Triggering 'Firm-Hopping'?</span>
+                            <span>Chicago Plumbers: Stop Losing $600 Burst Pipe Jobs While Navigating the Dan Ryan</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="luxury-salon-scripts-chicago-magmile.html" class="text-gray-300 hover:text-white transition-colors flex items-start">
+                            <span class="mr-2">→</span>
+                            <span>Magnificent Mile Stylists: Stop Losing $300 Extensions to Admin Friction</span>
                         </a>
                     </li>
                     <li>
@@ -596,21 +625,15 @@
                         </a>
                     </li>
                     <li>
-                        <a href="roofer-scripts-chicago-storm.html" class="text-gray-300 hover:text-white transition-colors flex items-start">
+                        <a href="estate-law-intake-scripts-chicago.html" class="text-gray-300 hover:text-white transition-colors flex items-start">
                             <span class="mr-2">→</span>
-                            <span>Chicago Roofers: Don't Let Storm-Rush Admin Destroy Your $10k Insurance Leads</span>
+                            <span>Chicago Estate Lawyers: Is Your 'Post-it' Intake Risking a Malpractice Claim?</span>
                         </a>
                     </li>
                     <li>
                         <a href="dental-specialist-chicago-scripts.html" class="text-gray-300 hover:text-white transition-colors flex items-start">
                             <span class="mr-2">→</span>
                             <span>Chicago Dental Specialists: Stop Ghosting $5k Implant Cases with Messy Follow-ups</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="estate-law-intake-scripts-chicago.html" class="text-gray-300 hover:text-white transition-colors flex items-start">
-                            <span class="mr-2">→</span>
-                            <span>Chicago Estate Lawyers: Is Your 'Post-it' Intake Risking a Malpractice Claim?</span>
                         </a>
                     </li>
                 </ul>
@@ -620,6 +643,12 @@
             <div>
                 <h3 class="text-xl font-semibold mb-4 text-orange-500">Industry Insights Across Locations</h3>
                 <ul class="space-y-3">
+                    <li>
+                        <a href="psychotherapy-scripts-london.html" class="text-gray-300 hover:text-white transition-colors flex items-start">
+                            <span class="mr-2">→</span>
+                            <span>London Psychotherapists: Protect Your Practice and Your Patients' Privacy</span>
+                        </a>
+                    </li>
                     <li>
                         <a href="therapy-intake-scripts-melbourne.html" class="text-gray-300 hover:text-white transition-colors flex items-start">
                             <span class="mr-2">→</span>
@@ -636,12 +665,6 @@
                         <a href="pediatric-therapy-scripts-la.html" class="text-gray-300 hover:text-white transition-colors flex items-start">
                             <span class="mr-2">→</span>
                             <span>LA Pediatric Therapists: Is Your Response Lag Triggering Parent Burnout?</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="psychotherapy-scripts-london.html" class="text-gray-300 hover:text-white transition-colors flex items-start">
-                            <span class="mr-2">→</span>
-                            <span>London Psychotherapists: Protect Your Practice and Your Patients' Privacy</span>
                         </a>
                     </li>
                     <li>
@@ -879,7 +902,7 @@
 
         // Function to calculate revenue leakage
         function calculateLeakage() {
-            const currencySymbol = '
+            const currencySymbol = "$";
             const id = getUrlParameter('id');
             let industryAvgTicket = 250; // Default value
             
@@ -904,13 +927,13 @@
             const lostLeads = parseInt(lostLeadsElement.value) || 0;
             
             // Update display values
-            avgTicketValueElement.textContent = `$${avgTicket.toLocaleString()}`;
+            avgTicketValueElement.textContent = currencySymbol + avgTicket.toLocaleString();
             lostLeadsValueElement.textContent = lostLeads;
             
             // Calculate annual revenue leakage
             const annualLoss = lostLeads * avgTicket * 52;
             
-            annualLossElement.textContent = `${annualLoss.toLocaleString()}`;
+            annualLossElement.textContent = currencySymbol + annualLoss.toLocaleString();
             
             // Add visual effect if loss is over $50,000
             if (annualLoss > 50000) {
@@ -941,105 +964,7 @@
             }
             
             if (avgTicketValueElement) {
-                avgTicketValueElement.textContent = `$${industryAvgTicket.toLocaleString()}`;
-            }
-            
-            // Calculate initial loss
-            calculateLeakage();
-        }
-
-        // Function to generate scripts (simplified version)
-        function generateScripts() {
-            const inputText = document.getElementById('input-text').value;
-            if (!inputText) {
-                alert('Please enter some text to process.');
-                return;
-            }
-            
-            // Simplified parsing logic
-            const nameMatch = inputText.match(/(Mr\.|Mrs\.|Ms\.)?\s*([A-Za-z]+)/);
-            const name = nameMatch ? nameMatch[0] : 'Customer';
-            
-            const timeMatch = inputText.match(/(\d+:\d+|\d+\s*[ap]m|tomorrow|Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday)/i);
-            const time = timeMatch ? timeMatch[0] : 'your appointment';
-            
-            const serviceMatch = inputText.match(/(haircut|consultation|appointment|service|treatment)/i);
-            const service = serviceMatch ? serviceMatch[0] : 'service';
-            
-            // Show success message
-            alert(`Scripts generated for ${name} for ${service} at ${time}!`);
-        }
-
-        // Load data when page loads
-        window.addEventListener('DOMContentLoaded', async () => {
-            await loadKeywordsData();
-            initCalculator();
-        });
-    </script>
-</body>
-</html>;
-            const id = getUrlParameter('id');
-            let industryAvgTicket = 250; // Default value
-            
-            // Get industry average ticket from JSON data if available
-            if (id && keywordsData[id] && keywordsData[id].calculator_logic) {
-                industryAvgTicket = keywordsData[id].calculator_logic.industry_avg_ticket || 250;
-            }
-            
-            // 安全地访问 DOM 元素
-            const avgTicketElement = document.getElementById('avg-ticket');
-            const lostLeadsElement = document.getElementById('lost-leads');
-            const avgTicketValueElement = document.getElementById('avg-ticket-value');
-            const lostLeadsValueElement = document.getElementById('lost-leads-value');
-            const annualLossElement = document.getElementById('annual-loss');
-            
-            if (!avgTicketElement || !lostLeadsElement || !avgTicketValueElement || !lostLeadsValueElement || !annualLossElement) {
-                console.warn('Calculator elements not found');
-                return;
-            }
-            
-            const avgTicket = parseInt(avgTicketElement.value) || industryAvgTicket;
-            const lostLeads = parseInt(lostLeadsElement.value) || 0;
-            
-            // Update display values
-            avgTicketValueElement.textContent = `$${avgTicket.toLocaleString()}`;
-            lostLeadsValueElement.textContent = lostLeads;
-            
-            // Calculate annual revenue leakage
-            const annualLoss = lostLeads * avgTicket * 52;
-            
-            annualLossElement.textContent = `$${annualLoss.toLocaleString()}`;
-            
-            // Add visual effect if loss is over $50,000
-            if (annualLoss > 50000) {
-                annualLossElement.classList.remove('text-orange-500');
-                annualLossElement.classList.add('text-red-500', 'animate-pulse');
-            } else {
-                annualLossElement.classList.remove('text-red-500', 'animate-pulse');
-                annualLossElement.classList.add('text-orange-500');
-            }
-        }
-
-        // Function to initialize calculator with industry data
-        function initCalculator() {
-            const id = getUrlParameter('id');
-            let industryAvgTicket = 250; // Default value
-            
-            // Get industry average ticket from JSON data if available
-            if (id && keywordsData[id] && keywordsData[id].calculator_logic) {
-                industryAvgTicket = keywordsData[id].calculator_logic.industry_avg_ticket || 250;
-            }
-            
-            // 安全地访问 DOM 元素
-            const avgTicketElement = document.getElementById('avg-ticket');
-            const avgTicketValueElement = document.getElementById('avg-ticket-value');
-            
-            if (avgTicketElement) {
-                avgTicketElement.value = industryAvgTicket;
-            }
-            
-            if (avgTicketValueElement) {
-                avgTicketValueElement.textContent = `$${industryAvgTicket.toLocaleString()}`;
+                avgTicketValueElement.textContent = currencySymbol + industryAvgTicket.toLocaleString();
             }
             
             // Calculate initial loss

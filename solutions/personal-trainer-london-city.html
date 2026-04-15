@@ -402,14 +402,37 @@
 <body class="bg-dark text-white min-h-screen flex flex-col">
     <div class="max-w-6xl w-full mx-auto px-4 py-12">
         <!-- Header Section -->
-        <header class="mb-16 text-center">
+        <header class="mb-16">
+            <!-- Breadcrumb Navigation -->
+            <div class="mb-8 text-left">
+                <nav class="flex" aria-label="Breadcrumb">
+                    <ol class="inline-flex items-center space-x-1 md:space-x-3">
+                        <li class="inline-flex items-center">
+                            <a href="../index.html" class="text-gray-400 hover:text-orange-500 transition-colors">
+                                <span class="mr-2">🏠</span> Home
+                            </a>
+                        </li>
+                        <li>
+                            <div class="flex items-center">
+                                <span class="mx-2 text-gray-500">/</span>
+                                <a href="../directory.html" class="text-gray-400 hover:text-orange-500 transition-colors">Directory</a>
+                            </div>
+                        </li>
+                        <li aria-current="page">
+                            <div class="flex items-center">
+                                <span class="mx-2 text-gray-500">/</span>
+                                <span class="text-gray-300">Solution</span>
+                            </div>
+                        </li>
+                    </ol>
+                </nav>
+            </div>
+            
             <div class="mb-8"><a href="../directory.html" class="text-orange-500 hover:text-orange-400 transition-colors flex items-center"><span class="mr-2">←</span> Back to Directory</a></div>
-            <h1 id="h1-title" class="text-[clamp(1.5rem,5vw,2.5rem)] font-bold mb-6 text-gradient">
+            <h1 id="h1-title" class="text-[clamp(1.5rem,5vw,2.5rem)] font-bold mb-6 text-gradient text-center">
                 Loading...
             </h1>
-            <p class="text-[clamp(1rem,2vw,1.25rem)] text-gray-300 mb-8">
-                Loading...
-            </p>
+
         </header>
 
         <!-- Tool Section -->
@@ -584,33 +607,33 @@
                 <h3 class="text-xl font-semibold mb-4 text-orange-500">Similar Services in Your Area</h3>
                 <ul class="space-y-3">
                     <li>
-                        <a href="lawyer-intake-scripts-london.html" class="text-gray-300 hover:text-white transition-colors flex items-start">
+                        <a href="plumber-london-emergency-scripts.html" class="text-gray-300 hover:text-white transition-colors flex items-start">
                             <span class="mr-2">→</span>
-                            <span>London Solicitors: Your 11 PM WhatsApp Client Follow-ups are a Malpractice Risk</span>
+                            <span>London Plumbers: Stop Losing £400 Leak Jobs While Navigating the M25</span>
                         </a>
                     </li>
                     <li>
-                        <a href="soho-tattoo-deposit-scripts-london.html" class="text-gray-300 hover:text-white transition-colors flex items-start">
+                        <a href="immigration-law-scripts-london.html" class="text-gray-300 hover:text-white transition-colors flex items-start">
                             <span class="mr-2">→</span>
-                            <span>Soho Studio Artists: Is Your 'Insta-Admin' Costing You £1,500 Full-Day Sessions?</span>
+                            <span>London Immigration Solicitors: Is Your Administrative Lag Triggering Home Office Risks?</span>
                         </a>
                     </li>
                     <li>
-                        <a href="hvac-efficiency-scripts-london.html" class="text-gray-300 hover:text-white transition-colors flex items-start">
+                        <a href="dental-private-scripts-london.html" class="text-gray-300 hover:text-white transition-colors flex items-start">
                             <span class="mr-2">→</span>
-                            <span>London HVAC Engineers: Is the ULEZ Charge the Only Thing Eating Your 2026 Profits?</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="landscaping-project-scripts-london.html" class="text-gray-300 hover:text-white transition-colors flex items-start">
-                            <span class="mr-2">→</span>
-                            <span>London Landscapers: Turn Rough Field Notes into Signed £15k Contracts</span>
+                            <span>Harley Street & Richmond Clinics: Turn Messy Notes into 5-Star Patient Journeys</span>
                         </a>
                     </li>
                     <li>
                         <a href="real-estate-compliance-scripts-london.html" class="text-gray-300 hover:text-white transition-colors flex items-start">
                             <span class="mr-2">→</span>
                             <span>London Letting Agents: Don't Let the 2026 Renters’ Rights Bill Turn Your Admin Into a Liability</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="tax-accountant-london-deadline.html" class="text-gray-300 hover:text-white transition-colors flex items-start">
+                            <span class="mr-2">→</span>
+                            <span>London Accountants: Your January 'Note Chaos' is Triggering HMRC Audit Risks</span>
                         </a>
                     </li>
                 </ul>
@@ -858,7 +881,7 @@
 
         // Function to calculate revenue leakage
         function calculateLeakage() {
-            const currencySymbol = '£';
+            const currencySymbol = "£";
             const id = getUrlParameter('id');
             let industryAvgTicket = 250; // Default value
             
@@ -883,13 +906,13 @@
             const lostLeads = parseInt(lostLeadsElement.value) || 0;
             
             // Update display values
-            avgTicketValueElement.textContent = `$${avgTicket.toLocaleString()}`;
+            avgTicketValueElement.textContent = currencySymbol + avgTicket.toLocaleString();
             lostLeadsValueElement.textContent = lostLeads;
             
             // Calculate annual revenue leakage
             const annualLoss = lostLeads * avgTicket * 52;
             
-            annualLossElement.textContent = `£${annualLoss.toLocaleString()}`;
+            annualLossElement.textContent = currencySymbol + annualLoss.toLocaleString();
             
             // Add visual effect if loss is over $50,000
             if (annualLoss > 50000) {
@@ -920,7 +943,7 @@
             }
             
             if (avgTicketValueElement) {
-                avgTicketValueElement.textContent = `$${industryAvgTicket.toLocaleString()}`;
+                avgTicketValueElement.textContent = currencySymbol + industryAvgTicket.toLocaleString();
             }
             
             // Calculate initial loss

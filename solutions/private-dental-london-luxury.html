@@ -402,14 +402,37 @@
 <body class="bg-dark text-white min-h-screen flex flex-col">
     <div class="max-w-6xl w-full mx-auto px-4 py-12">
         <!-- Header Section -->
-        <header class="mb-16 text-center">
+        <header class="mb-16">
+            <!-- Breadcrumb Navigation -->
+            <div class="mb-8 text-left">
+                <nav class="flex" aria-label="Breadcrumb">
+                    <ol class="inline-flex items-center space-x-1 md:space-x-3">
+                        <li class="inline-flex items-center">
+                            <a href="../index.html" class="text-gray-400 hover:text-orange-500 transition-colors">
+                                <span class="mr-2">🏠</span> Home
+                            </a>
+                        </li>
+                        <li>
+                            <div class="flex items-center">
+                                <span class="mx-2 text-gray-500">/</span>
+                                <a href="../directory.html" class="text-gray-400 hover:text-orange-500 transition-colors">Directory</a>
+                            </div>
+                        </li>
+                        <li aria-current="page">
+                            <div class="flex items-center">
+                                <span class="mx-2 text-gray-500">/</span>
+                                <span class="text-gray-300">Solution</span>
+                            </div>
+                        </li>
+                    </ol>
+                </nav>
+            </div>
+            
             <div class="mb-8"><a href="../directory.html" class="text-orange-500 hover:text-orange-400 transition-colors flex items-center"><span class="mr-2">←</span> Back to Directory</a></div>
-            <h1 id="h1-title" class="text-[clamp(1.5rem,5vw,2.5rem)] font-bold mb-6 text-gradient">
+            <h1 id="h1-title" class="text-[clamp(1.5rem,5vw,2.5rem)] font-bold mb-6 text-gradient text-center">
                 Loading...
             </h1>
-            <p class="text-[clamp(1rem,2vw,1.25rem)] text-gray-300 mb-8">
-                Loading...
-            </p>
+
         </header>
 
         <!-- Tool Section -->
@@ -584,9 +607,9 @@
                 <h3 class="text-xl font-semibold mb-4 text-orange-500">Similar Services in Your Area</h3>
                 <ul class="space-y-3">
                     <li>
-                        <a href="tax-accountant-london-deadline.html" class="text-gray-300 hover:text-white transition-colors flex items-start">
+                        <a href="employment-law-london-intake.html" class="text-gray-300 hover:text-white transition-colors flex items-start">
                             <span class="mr-2">→</span>
-                            <span>London Accountants: Your January 'Note Chaos' is Triggering HMRC Audit Risks</span>
+                            <span>London Employment Solicitors: Is Your Response Lag Triggering Client Ghosting?</span>
                         </a>
                     </li>
                     <li>
@@ -596,9 +619,9 @@
                         </a>
                     </li>
                     <li>
-                        <a href="immigration-law-scripts-london-shoreditch.html" class="text-gray-300 hover:text-white transition-colors flex items-start">
+                        <a href="psychotherapy-scripts-london.html" class="text-gray-300 hover:text-white transition-colors flex items-start">
                             <span class="mr-2">→</span>
-                            <span>Shoreditch Tech Hub Lawyers: Is Your Admin Lag Triggering Home Office Rejections?</span>
+                            <span>London Psychotherapists: Protect Your Practice and Your Patients' Privacy</span>
                         </a>
                     </li>
                     <li>
@@ -608,9 +631,9 @@
                         </a>
                     </li>
                     <li>
-                        <a href="hvac-efficiency-scripts-london.html" class="text-gray-300 hover:text-white transition-colors flex items-start">
+                        <a href="plumber-london-emergency-scripts.html" class="text-gray-300 hover:text-white transition-colors flex items-start">
                             <span class="mr-2">→</span>
-                            <span>London HVAC Engineers: Is the ULEZ Charge the Only Thing Eating Your 2026 Profits?</span>
+                            <span>London Plumbers: Stop Losing £400 Leak Jobs While Navigating the M25</span>
                         </a>
                     </li>
                 </ul>
@@ -621,33 +644,33 @@
                 <h3 class="text-xl font-semibold mb-4 text-orange-500">Industry Insights Across Locations</h3>
                 <ul class="space-y-3">
                     <li>
-                        <a href="pediatric-dental-scripts-brooklyn.html" class="text-gray-300 hover:text-white transition-colors flex items-start">
-                            <span class="mr-2">→</span>
-                            <span>Park Slope & Williamsburg Dentists: Why Busy Brooklyn Parents are 'Ghosting' Your Clinic</span>
-                        </a>
-                    </li>
-                    <li>
                         <a href="cosmetic-dental-scripts-toronto.html" class="text-gray-300 hover:text-white transition-colors flex items-start">
                             <span class="mr-2">→</span>
                             <span>Yorkville Cosmetic Dentists: Why Your NHS-Style Admin is Handing $15k Veneer Cases to DUMBO</span>
                         </a>
                     </li>
                     <li>
-                        <a href="dental-patient-triage-toronto.html" class="text-gray-300 hover:text-white transition-colors flex items-start">
+                        <a href="specialist-dental-melbourne-cbd.html" class="text-gray-300 hover:text-white transition-colors flex items-start">
                             <span class="mr-2">→</span>
-                            <span>Toronto Dental Clinics: Why Your Messy Admin is a Compliance Red Flag in 2026</span>
+                            <span>Melbourne Orthodontists: Why Your Messy Referral Admin is Handing Invisalign Leads to the CBD</span>
                         </a>
                     </li>
                     <li>
-                        <a href="dental-specialist-chicago-scripts.html" class="text-gray-300 hover:text-white transition-colors flex items-start">
+                        <a href="dental-booking-scripts-sydney.html" class="text-gray-300 hover:text-white transition-colors flex items-start">
                             <span class="mr-2">→</span>
-                            <span>Chicago Dental Specialists: Stop Ghosting $5k Implant Cases with Messy Follow-ups</span>
+                            <span>Bondi & CBD Dental Clinics: Why Your Messy Voicemail Notes Lose You 4 Full-Arch Cases a Month</span>
                         </a>
                     </li>
                     <li>
-                        <a href="specialist-dental-sydney-tmj.html" class="text-gray-300 hover:text-white transition-colors flex items-start">
+                        <a href="cosmetic-dental-la-beverlyhills.html" class="text-gray-300 hover:text-white transition-colors flex items-start">
                             <span class="mr-2">→</span>
-                            <span>Sydney Specialists: Why Your Messy Referral Admin is Ghosting $8,000 TMJ Cases</span>
+                            <span>90210 Cosmetic Dentists: Why Your NHS-Style Admin is Handing $25k Smile Designs to Malibu</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="dental-hipaa-scripts-nyc-emergency.html" class="text-gray-300 hover:text-white transition-colors flex items-start">
+                            <span class="mr-2">→</span>
+                            <span>NYC Solo Dentists: Your Sleep is Costing You $2,000 Per Missed Emergency Call</span>
                         </a>
                     </li>
                 </ul>
@@ -882,7 +905,7 @@
 
         // Function to calculate revenue leakage
         function calculateLeakage() {
-            const currencySymbol = '£';
+            const currencySymbol = "£";
             const id = getUrlParameter('id');
             let industryAvgTicket = 250; // Default value
             
@@ -907,13 +930,13 @@
             const lostLeads = parseInt(lostLeadsElement.value) || 0;
             
             // Update display values
-            avgTicketValueElement.textContent = `$${avgTicket.toLocaleString()}`;
+            avgTicketValueElement.textContent = currencySymbol + avgTicket.toLocaleString();
             lostLeadsValueElement.textContent = lostLeads;
             
             // Calculate annual revenue leakage
             const annualLoss = lostLeads * avgTicket * 52;
             
-            annualLossElement.textContent = `£${annualLoss.toLocaleString()}`;
+            annualLossElement.textContent = currencySymbol + annualLoss.toLocaleString();
             
             // Add visual effect if loss is over $50,000
             if (annualLoss > 50000) {
@@ -944,7 +967,7 @@
             }
             
             if (avgTicketValueElement) {
-                avgTicketValueElement.textContent = `$${industryAvgTicket.toLocaleString()}`;
+                avgTicketValueElement.textContent = currencySymbol + industryAvgTicket.toLocaleString();
             }
             
             // Calculate initial loss
