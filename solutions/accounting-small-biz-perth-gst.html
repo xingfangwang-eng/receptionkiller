@@ -7,6 +7,14 @@
     <meta name="description" content="undefined">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
+        // 确保使用 Tailwind CSS v3
+        if (typeof tailwind !== 'undefined' && tailwind.version) {
+            console.log('Tailwind CSS version:', tailwind.version);
+        } else {
+            console.log('Tailwind CSS v3 is being loaded');
+        }
+    </script>
+    <script>
         // 确保 tailwind 存在
         if (typeof tailwind === 'undefined') {
             // 如果 Tailwind 未加载，使用内联样式作为备用
@@ -583,6 +591,12 @@
                 <h3 class="text-xl font-semibold mb-4 text-orange-500">Industry Insights Across Locations</h3>
                 <ul class="space-y-3">
                     <li>
+                        <a href="accounting-tax-intake-sydney.html" class="text-gray-300 hover:text-white transition-colors flex items-start">
+                            <span class="mr-2">→</span>
+                            <span>Sydney CBD Accountants: Is Your 'Post-it' Admin Triggering ATO Audit Risks?</span>
+                        </a>
+                    </li>
+                    <li>
                         <a href="accounting-gst-sydney-intake.html" class="text-gray-300 hover:text-white transition-colors flex items-start">
                             <span class="mr-2">→</span>
                             <span>Sydney Small Biz Accountants: Is Your 'Post-it' Admin Triggering ATO Audit Risks?</span>
@@ -592,12 +606,6 @@
                         <a href="accounting-tax-scripts-chicago.html" class="text-gray-300 hover:text-white transition-colors flex items-start">
                             <span class="mr-2">→</span>
                             <span>Chicago CPAs: Stop Losing $2,500 Tax Retainers to 'Paper Note' Admin</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="accounting-tax-intake-sydney.html" class="text-gray-300 hover:text-white transition-colors flex items-start">
-                            <span class="mr-2">→</span>
-                            <span>Sydney CBD Accountants: Is Your 'Post-it' Admin Triggering ATO Audit Risks?</span>
                         </a>
                     </li>
                 </ul>

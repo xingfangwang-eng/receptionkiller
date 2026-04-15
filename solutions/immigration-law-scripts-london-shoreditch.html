@@ -7,6 +7,14 @@
     <meta name="description" content="undefined">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
+        // 确保使用 Tailwind CSS v3
+        if (typeof tailwind !== 'undefined' && tailwind.version) {
+            console.log('Tailwind CSS version:', tailwind.version);
+        } else {
+            console.log('Tailwind CSS v3 is being loaded');
+        }
+    </script>
+    <script>
         // 确保 tailwind 存在
         if (typeof tailwind === 'undefined') {
             // 如果 Tailwind 未加载，使用内联样式作为备用
@@ -576,33 +584,33 @@
                 <h3 class="text-xl font-semibold mb-4 text-orange-500">Similar Services in Your Area</h3>
                 <ul class="space-y-3">
                     <li>
+                        <a href="private-dental-london-luxury.html" class="text-gray-300 hover:text-white transition-colors flex items-start">
+                            <span class="mr-2">→</span>
+                            <span>London Elite Dentistry: Is Your 'NHS-Style' Admin Costing You £10k Smile Makeovers?</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="psychotherapy-scripts-london.html" class="text-gray-300 hover:text-white transition-colors flex items-start">
+                            <span class="mr-2">→</span>
+                            <span>London Psychotherapists: Protect Your Practice and Your Patients' Privacy</span>
+                        </a>
+                    </li>
+                    <li>
                         <a href="real-estate-compliance-scripts-london.html" class="text-gray-300 hover:text-white transition-colors flex items-start">
                             <span class="mr-2">→</span>
                             <span>London Letting Agents: Don't Let the 2026 Renters’ Rights Bill Turn Your Admin Into a Liability</span>
                         </a>
                     </li>
                     <li>
-                        <a href="landscaping-project-scripts-london.html" class="text-gray-300 hover:text-white transition-colors flex items-start">
-                            <span class="mr-2">→</span>
-                            <span>London Landscapers: Turn Rough Field Notes into Signed £15k Contracts</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="hvac-efficiency-scripts-london.html" class="text-gray-300 hover:text-white transition-colors flex items-start">
-                            <span class="mr-2">→</span>
-                            <span>London HVAC Engineers: Is the ULEZ Charge the Only Thing Eating Your 2026 Profits?</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="tax-accountant-london-deadline.html" class="text-gray-300 hover:text-white transition-colors flex items-start">
-                            <span class="mr-2">→</span>
-                            <span>London Accountants: Your January 'Note Chaos' is Triggering HMRC Audit Risks</span>
-                        </a>
-                    </li>
-                    <li>
                         <a href="dental-private-scripts-london.html" class="text-gray-300 hover:text-white transition-colors flex items-start">
                             <span class="mr-2">→</span>
                             <span>Harley Street & Richmond Clinics: Turn Messy Notes into 5-Star Patient Journeys</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="soho-tattoo-deposit-scripts-london.html" class="text-gray-300 hover:text-white transition-colors flex items-start">
+                            <span class="mr-2">→</span>
+                            <span>Soho Studio Artists: Is Your 'Insta-Admin' Costing You £1,500 Full-Day Sessions?</span>
                         </a>
                     </li>
                 </ul>
@@ -613,15 +621,9 @@
                 <h3 class="text-xl font-semibold mb-4 text-orange-500">Industry Insights Across Locations</h3>
                 <ul class="space-y-3">
                     <li>
-                        <a href="immigration-law-vancouver-startup.html" class="text-gray-300 hover:text-white transition-colors flex items-start">
+                        <a href="small-biz-law-sydney-intake.html" class="text-gray-300 hover:text-white transition-colors flex items-start">
                             <span class="mr-2">→</span>
-                            <span>Vancouver Immigration Solicitors: Is Your Admin Lag Costing You Tech Talent Leads?</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="family-law-toronto-scripts.html" class="text-gray-300 hover:text-white transition-colors flex items-start">
-                            <span class="mr-2">→</span>
-                            <span>GTA Family Lawyers: Your Messy Initial Notes are a Trauma-Informed Liability</span>
+                            <span>Surry Hills Startups: Is Your Messy Intake Losing You $15k Commercial Retainers?</span>
                         </a>
                     </li>
                     <li>
@@ -631,15 +633,21 @@
                         </a>
                     </li>
                     <li>
-                        <a href="small-biz-law-sydney-intake.html" class="text-gray-300 hover:text-white transition-colors flex items-start">
+                        <a href="law-society-scripts-sydney.html" class="text-gray-300 hover:text-white transition-colors flex items-start">
                             <span class="mr-2">→</span>
-                            <span>Surry Hills Startups: Is Your Messy Intake Losing You $15k Commercial Retainers?</span>
+                            <span>Sydney Boutique Law Firms: Stop Losing 6 Billable Hours a Week to Intake Mess</span>
                         </a>
                     </li>
                     <li>
-                        <a href="law-personal-injury-chicago-intake.html" class="text-gray-300 hover:text-white transition-colors flex items-start">
+                        <a href="estate-law-intake-scripts-chicago.html" class="text-gray-300 hover:text-white transition-colors flex items-start">
                             <span class="mr-2">→</span>
-                            <span>Cook County Injury Lawyers: Is Your Admin Lag Triggering 'Firm-Hopping'?</span>
+                            <span>Chicago Estate Lawyers: Is Your 'Post-it' Intake Risking a Malpractice Claim?</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="family-law-toronto-scripts.html" class="text-gray-300 hover:text-white transition-colors flex items-start">
+                            <span class="mr-2">→</span>
+                            <span>GTA Family Lawyers: Your Messy Initial Notes are a Trauma-Informed Liability</span>
                         </a>
                     </li>
                 </ul>

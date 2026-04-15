@@ -7,6 +7,14 @@
     <meta name="description" content="undefined">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
+        // 确保使用 Tailwind CSS v3
+        if (typeof tailwind !== 'undefined' && tailwind.version) {
+            console.log('Tailwind CSS version:', tailwind.version);
+        } else {
+            console.log('Tailwind CSS v3 is being loaded');
+        }
+    </script>
+    <script>
         // 确保 tailwind 存在
         if (typeof tailwind === 'undefined') {
             // 如果 Tailwind 未加载，使用内联样式作为备用
@@ -588,6 +596,12 @@
                         </a>
                     </li>
                     <li>
+                        <a href="tattoo-artist-fitzroy-melbourne.html" class="text-gray-300 hover:text-white transition-colors flex items-start">
+                            <span class="mr-2">→</span>
+                            <span>Fitzroy Studios: Don't Let 'Guest Spot' Admin Mess Kill Your Melbourne Vibe</span>
+                        </a>
+                    </li>
+                    <li>
                         <a href="barber-cbd-melbourne-scripts.html" class="text-gray-300 hover:text-white transition-colors flex items-start">
                             <span class="mr-2">→</span>
                             <span>Melbourne CBD Barbers: Stop Losing $80 Fades to 'No-Show' Ghosting</span>
@@ -597,12 +611,6 @@
                         <a href="cleaning-service-scripts-melbourne.html" class="text-gray-300 hover:text-white transition-colors flex items-start">
                             <span class="mr-2">→</span>
                             <span>Melbourne Cleaners: Is Your Messy Admin Spotting Your 'Eco-Friendly' Reputation?</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="pet-grooming-scripts-stkilda-melbourne.html" class="text-gray-300 hover:text-white transition-colors flex items-start">
-                            <span class="mr-2">→</span>
-                            <span>St Kilda Pet Pros: Is Your 'NHS-Style' Admin Costing You Posh Poodle Leads?</span>
                         </a>
                     </li>
                 </ul>

@@ -7,6 +7,14 @@
     <meta name="description" content="undefined">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
+        // 确保使用 Tailwind CSS v3
+        if (typeof tailwind !== 'undefined' && tailwind.version) {
+            console.log('Tailwind CSS version:', tailwind.version);
+        } else {
+            console.log('Tailwind CSS v3 is being loaded');
+        }
+    </script>
+    <script>
         // 确保 tailwind 存在
         if (typeof tailwind === 'undefined') {
             // 如果 Tailwind 未加载，使用内联样式作为备用
@@ -576,9 +584,21 @@
                 <h3 class="text-xl font-semibold mb-4 text-orange-500">Similar Services in Your Area</h3>
                 <ul class="space-y-3">
                     <li>
-                        <a href="pet-grooming-scripts-chicago.html" class="text-gray-300 hover:text-white transition-colors flex items-start">
+                        <a href="dental-specialist-chicago-scripts.html" class="text-gray-300 hover:text-white transition-colors flex items-start">
                             <span class="mr-2">→</span>
-                            <span>Chicago Pet Pros: Don't Let 'No-Shows' Freeze Your 2026 Profits</span>
+                            <span>Chicago Dental Specialists: Stop Ghosting $5k Implant Cases with Messy Follow-ups</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="deep-clean-scripts-chicago-apartments.html" class="text-gray-300 hover:text-white transition-colors flex items-start">
+                            <span class="mr-2">→</span>
+                            <span>Chicago Cleaners: Stop Losing $400 Move-Out Jobs to Dispatch Lag</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="accounting-tax-scripts-chicago.html" class="text-gray-300 hover:text-white transition-colors flex items-start">
+                            <span class="mr-2">→</span>
+                            <span>Chicago CPAs: Stop Losing $2,500 Tax Retainers to 'Paper Note' Admin</span>
                         </a>
                     </li>
                     <li>
@@ -588,21 +608,9 @@
                         </a>
                     </li>
                     <li>
-                        <a href="gold-coast-salon-booking-chicago.html" class="text-gray-300 hover:text-white transition-colors flex items-start">
-                            <span class="mr-2">→</span>
-                            <span>Gold Coast Stylists: Stop Losing $400 Extension Leads to Admin Friction</span>
-                        </a>
-                    </li>
-                    <li>
                         <a href="estate-law-intake-scripts-chicago.html" class="text-gray-300 hover:text-white transition-colors flex items-start">
                             <span class="mr-2">→</span>
                             <span>Chicago Estate Lawyers: Is Your 'Post-it' Intake Risking a Malpractice Claim?</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="dental-specialist-chicago-scripts.html" class="text-gray-300 hover:text-white transition-colors flex items-start">
-                            <span class="mr-2">→</span>
-                            <span>Chicago Dental Specialists: Stop Ghosting $5k Implant Cases with Messy Follow-ups</span>
                         </a>
                     </li>
                 </ul>
@@ -613,21 +621,21 @@
                 <h3 class="text-xl font-semibold mb-4 text-orange-500">Industry Insights Across Locations</h3>
                 <ul class="space-y-3">
                     <li>
-                        <a href="tattoo-studio-nyc-les-scripts.html" class="text-gray-300 hover:text-white transition-colors flex items-start">
-                            <span class="mr-2">→</span>
-                            <span>LES & East Village Tattoo Artists: Stop Losing $500 Deposits to 'DM Drift'</span>
-                        </a>
-                    </li>
-                    <li>
                         <a href="tattoo-artist-fitzroy-melbourne.html" class="text-gray-300 hover:text-white transition-colors flex items-start">
                             <span class="mr-2">→</span>
                             <span>Fitzroy Studios: Don't Let 'Guest Spot' Admin Mess Kill Your Melbourne Vibe</span>
                         </a>
                     </li>
                     <li>
-                        <a href="soho-tattoo-deposit-scripts-london.html" class="text-gray-300 hover:text-white transition-colors flex items-start">
+                        <a href="tattoo-studio-nyc-les-scripts.html" class="text-gray-300 hover:text-white transition-colors flex items-start">
                             <span class="mr-2">→</span>
-                            <span>Soho Studio Artists: Is Your 'Insta-Admin' Costing You £1,500 Full-Day Sessions?</span>
+                            <span>LES & East Village Tattoo Artists: Stop Losing $500 Deposits to 'DM Drift'</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="tattoo-studio-scripts-toronto.html" class="text-gray-300 hover:text-white transition-colors flex items-start">
+                            <span class="mr-2">→</span>
+                            <span>Queen West Tattoo Artists: Stop Losing $500 Deposits to 'DM Drift'</span>
                         </a>
                     </li>
                     <li>
@@ -637,9 +645,9 @@
                         </a>
                     </li>
                     <li>
-                        <a href="tattoo-studio-scripts-toronto.html" class="text-gray-300 hover:text-white transition-colors flex items-start">
+                        <a href="soho-tattoo-deposit-scripts-london.html" class="text-gray-300 hover:text-white transition-colors flex items-start">
                             <span class="mr-2">→</span>
-                            <span>Queen West Tattoo Artists: Stop Losing $500 Deposits to 'DM Drift'</span>
+                            <span>Soho Studio Artists: Is Your 'Insta-Admin' Costing You £1,500 Full-Day Sessions?</span>
                         </a>
                     </li>
                 </ul>

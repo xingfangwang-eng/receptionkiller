@@ -7,6 +7,14 @@
     <meta name="description" content="undefined">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
+        // 确保使用 Tailwind CSS v3
+        if (typeof tailwind !== 'undefined' && tailwind.version) {
+            console.log('Tailwind CSS version:', tailwind.version);
+        } else {
+            console.log('Tailwind CSS v3 is being loaded');
+        }
+    </script>
+    <script>
         // 确保 tailwind 存在
         if (typeof tailwind === 'undefined') {
             // 如果 Tailwind 未加载，使用内联样式作为备用
@@ -576,33 +584,33 @@
                 <h3 class="text-xl font-semibold mb-4 text-orange-500">Similar Services in Your Area</h3>
                 <ul class="space-y-3">
                     <li>
-                        <a href="law-society-scripts-sydney.html" class="text-gray-300 hover:text-white transition-colors flex items-start">
+                        <a href="accounting-tax-intake-sydney.html" class="text-gray-300 hover:text-white transition-colors flex items-start">
                             <span class="mr-2">→</span>
-                            <span>Sydney Boutique Law Firms: Stop Losing 6 Billable Hours a Week to Intake Mess</span>
+                            <span>Sydney CBD Accountants: Is Your 'Post-it' Admin Triggering ATO Audit Risks?</span>
                         </a>
                     </li>
                     <li>
-                        <a href="dental-booking-scripts-sydney.html" class="text-gray-300 hover:text-white transition-colors flex items-start">
+                        <a href="emergency-plumber-sydney-dispatch.html" class="text-gray-300 hover:text-white transition-colors flex items-start">
                             <span class="mr-2">→</span>
-                            <span>Bondi & CBD Dental Clinics: Why Your Messy Voicemail Notes Lose You 4 Full-Arch Cases a Month</span>
+                            <span>Sydney Plumbers: Turn Messy Morning Calls into Guaranteed Call-Outs</span>
                         </a>
                     </li>
                     <li>
-                        <a href="therapy-scripts-bondi-sydney.html" class="text-gray-300 hover:text-white transition-colors flex items-start">
+                        <a href="orthodontic-lead-scripts-sydney.html" class="text-gray-300 hover:text-white transition-colors flex items-start">
                             <span class="mr-2">→</span>
-                            <span>Bondi Therapists: Is Your Sloppy Admin Triggering Patient Burnout?</span>
+                            <span>Mosman & St Ives Orthodontists: Why Your Messy Admin is Handing Invisalign Leads to the CBD</span>
                         </a>
                     </li>
                     <li>
-                        <a href="immigration-nurse-visa-scripts-sydney.html" class="text-gray-300 hover:text-white transition-colors flex items-start">
+                        <a href="small-biz-law-sydney-intake.html" class="text-gray-300 hover:text-white transition-colors flex items-start">
                             <span class="mr-2">→</span>
-                            <span>Sydney Immigration Lawyers: Your Admin Lag is Costing You Elite Healthcare Leads</span>
+                            <span>Surry Hills Startups: Is Your Messy Intake Losing You $15k Commercial Retainers?</span>
                         </a>
                     </li>
                     <li>
-                        <a href="cleaning-service-sydney-bond-back.html" class="text-gray-300 hover:text-white transition-colors flex items-start">
+                        <a href="luxury-hair-extension-scripts-sydney.html" class="text-gray-300 hover:text-white transition-colors flex items-start">
                             <span class="mr-2">→</span>
-                            <span>Sydney Move-Out Cleaners: Stop Losing $500 Bond-Back Jobs to 'Admin Fog'</span>
+                            <span>Sydney Stylists: Is Your 'NHS-Style' Admin Costing You $1,500 Extension Cases?</span>
                         </a>
                     </li>
                 </ul>
@@ -613,33 +621,33 @@
                 <h3 class="text-xl font-semibold mb-4 text-orange-500">Industry Insights Across Locations</h3>
                 <ul class="space-y-3">
                     <li>
-                        <a href="commercial-hvac-nyc-service.html" class="text-gray-300 hover:text-white transition-colors flex items-start">
+                        <a href="hvac-polar-vortex-chicago.html" class="text-gray-300 hover:text-white transition-colors flex items-start">
                             <span class="mr-2">→</span>
-                            <span>Manhattan Building Techs: Stop Losing $50k Service Contracts to 'Post-it' Admin</span>
+                            <span>Chicago HVAC Pros: Your Dashboard Notes are Costing You $2,500/Week During the Vortex</span>
                         </a>
                     </li>
                     <li>
-                        <a href="hvac-service-scripts-toronto.html" class="text-gray-300 hover:text-white transition-colors flex items-start">
+                        <a href="hvac-lead-capture-nyc.html" class="text-gray-300 hover:text-white transition-colors flex items-start">
                             <span class="mr-2">→</span>
-                            <span>Ontario HVAC Pros: Don't Let 'Furnace Season' Turn Your Admin Into a Disaster Zone</span>
+                            <span>NYC HVAC Techs: Scrawling Job Notes on Scraps is Bleeding Your 2026 Bottom Line</span>
                         </a>
                     </li>
                     <li>
-                        <a href="commercial-hvac-scripts-melbourne.html" class="text-gray-300 hover:text-white transition-colors flex items-start">
+                        <a href="hvac-efficiency-scripts-london.html" class="text-gray-300 hover:text-white transition-colors flex items-start">
                             <span class="mr-2">→</span>
-                            <span>Melbourne Facility Managers: Why Your Messy Admin is Ghosting $20k Service Contracts</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="hvac-heatwave-la-leads.html" class="text-gray-300 hover:text-white transition-colors flex items-start">
-                            <span class="mr-2">→</span>
-                            <span>LA HVAC: Stop Losing $1,500 AC Repairs While Stuck in 105°F Traffic</span>
+                            <span>London HVAC Engineers: Is the ULEZ Charge the Only Thing Eating Your 2026 Profits?</span>
                         </a>
                     </li>
                     <li>
                         <a href="condo-hvac-toronto-maintenance.html" class="text-gray-300 hover:text-white transition-colors flex items-start">
                             <span class="mr-2">→</span>
                             <span>Toronto Condo Techs: Stop Losing $400 Fan-Coil Repairs to High-Rise Logistics</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="commercial-hvac-nyc-service.html" class="text-gray-300 hover:text-white transition-colors flex items-start">
+                            <span class="mr-2">→</span>
+                            <span>Manhattan Building Techs: Stop Losing $50k Service Contracts to 'Post-it' Admin</span>
                         </a>
                     </li>
                 </ul>

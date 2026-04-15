@@ -7,6 +7,14 @@
     <meta name="description" content="undefined">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
+        // 确保使用 Tailwind CSS v3
+        if (typeof tailwind !== 'undefined' && tailwind.version) {
+            console.log('Tailwind CSS version:', tailwind.version);
+        } else {
+            console.log('Tailwind CSS v3 is being loaded');
+        }
+    </script>
+    <script>
         // 确保 tailwind 存在
         if (typeof tailwind === 'undefined') {
             // 如果 Tailwind 未加载，使用内联样式作为备用
@@ -583,33 +591,33 @@
                 <h3 class="text-xl font-semibold mb-4 text-orange-500">Industry Insights Across Locations</h3>
                 <ul class="space-y-3">
                     <li>
-                        <a href="hvac-heat-pump-scripts-toronto.html" class="text-gray-300 hover:text-white transition-colors flex items-start">
-                            <span class="mr-2">→</span>
-                            <span>Toronto HVAC: Stop Losing $15k Heat Pump Installs to 'Messy Note' Syndrome</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="emergency-hvac-sydney-leads.html" class="text-gray-300 hover:text-white transition-colors flex items-start">
-                            <span class="mr-2">→</span>
-                            <span>Sydney Summer Burn: Stop Losing $1,200 AC Repairs While You're Stuck in M4 Traffic</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="commercial-hvac-scripts-chicago-loop.html" class="text-gray-300 hover:text-white transition-colors flex items-start">
-                            <span class="mr-2">→</span>
-                            <span>Chicago Loop Facility Techs: Stop Losing $50k Service Contracts to 'Post-it' Admin</span>
-                        </a>
-                    </li>
-                    <li>
                         <a href="hvac-service-scripts-toronto.html" class="text-gray-300 hover:text-white transition-colors flex items-start">
                             <span class="mr-2">→</span>
                             <span>Ontario HVAC Pros: Don't Let 'Furnace Season' Turn Your Admin Into a Disaster Zone</span>
                         </a>
                     </li>
                     <li>
+                        <a href="hvac-polar-vortex-chicago.html" class="text-gray-300 hover:text-white transition-colors flex items-start">
+                            <span class="mr-2">→</span>
+                            <span>Chicago HVAC Pros: Your Dashboard Notes are Costing You $2,500/Week During the Vortex</span>
+                        </a>
+                    </li>
+                    <li>
                         <a href="commercial-hvac-nyc-service.html" class="text-gray-300 hover:text-white transition-colors flex items-start">
                             <span class="mr-2">→</span>
                             <span>Manhattan Building Techs: Stop Losing $50k Service Contracts to 'Post-it' Admin</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="hvac-energy-audit-scripts-sydney.html" class="text-gray-300 hover:text-white transition-colors flex items-start">
+                            <span class="mr-2">→</span>
+                            <span>Sydney HVAC Techs: Is Your 'Scrappy' Admin Missing Out on $15k Commercial Retrofits?</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="condo-hvac-toronto-maintenance.html" class="text-gray-300 hover:text-white transition-colors flex items-start">
+                            <span class="mr-2">→</span>
+                            <span>Toronto Condo Techs: Stop Losing $400 Fan-Coil Repairs to High-Rise Logistics</span>
                         </a>
                     </li>
                 </ul>

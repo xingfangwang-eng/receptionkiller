@@ -7,6 +7,14 @@
     <meta name="description" content="undefined">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
+        // 确保使用 Tailwind CSS v3
+        if (typeof tailwind !== 'undefined' && tailwind.version) {
+            console.log('Tailwind CSS version:', tailwind.version);
+        } else {
+            console.log('Tailwind CSS v3 is being loaded');
+        }
+    </script>
+    <script>
         // 确保 tailwind 存在
         if (typeof tailwind === 'undefined') {
             // 如果 Tailwind 未加载，使用内联样式作为备用
@@ -576,33 +584,33 @@
                 <h3 class="text-xl font-semibold mb-4 text-orange-500">Similar Services in Your Area</h3>
                 <ul class="space-y-3">
                     <li>
-                        <a href="cleaning-service-la-airbnb-scripts.html" class="text-gray-300 hover:text-white transition-colors flex items-start">
-                            <span class="mr-2">→</span>
-                            <span>LA Airbnb Cleaners: Stop Losing $250 Turnovers to 'Admin Lag'</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="legal-entertainment-intake-la.html" class="text-gray-300 hover:text-white transition-colors flex items-start">
-                            <span class="mr-2">→</span>
-                            <span>LA Entertainment Lawyers: Your Messy Initial Notes are a Malpractice Risk</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="endodontist-specialty-scripts-la.html" class="text-gray-300 hover:text-white transition-colors flex items-start">
-                            <span class="mr-2">→</span>
-                            <span>LA Endodontists: Is Your Sloppy Referral Admin Ghosting $3k Root Canal Cases?</span>
-                        </a>
-                    </li>
-                    <li>
                         <a href="real-estate-luxury-intake-la.html" class="text-gray-300 hover:text-white transition-colors flex items-start">
                             <span class="mr-2">→</span>
                             <span>LA Luxury Agents: Your Typo-Heavy Texts are Costing You $50k Commissions</span>
                         </a>
                     </li>
                     <li>
+                        <a href="personal-trainer-intake-la.html" class="text-gray-300 hover:text-white transition-colors flex items-start">
+                            <span class="mr-2">→</span>
+                            <span>Venice & WeHo Trainers: Turn Instagram DMs into $1,200 Coaching Packages</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="residential-ac-scripts-staten-island.html" class="text-gray-300 hover:text-white transition-colors flex items-start">
+                            <span class="mr-2">→</span>
+                            <span>SI & Queens HVAC: Don't Let 100% Humidity Spikes Burn Your Admin to the Ground</span>
+                        </a>
+                    </li>
+                    <li>
                         <a href="emergency-plumber-la-scripts.html" class="text-gray-300 hover:text-white transition-colors flex items-start">
                             <span class="mr-2">→</span>
                             <span>LA Plumbers: Stop Losing $800 Drain Jobs While You're Stuck on the 405</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="cleaning-service-la-airbnb-scripts.html" class="text-gray-300 hover:text-white transition-colors flex items-start">
+                            <span class="mr-2">→</span>
+                            <span>LA Airbnb Cleaners: Stop Losing $250 Turnovers to 'Admin Lag'</span>
                         </a>
                     </li>
                 </ul>
@@ -613,9 +621,9 @@
                 <h3 class="text-xl font-semibold mb-4 text-orange-500">Industry Insights Across Locations</h3>
                 <ul class="space-y-3">
                     <li>
-                        <a href="hvac-service-scripts-toronto.html" class="text-gray-300 hover:text-white transition-colors flex items-start">
+                        <a href="commercial-hvac-nyc-service.html" class="text-gray-300 hover:text-white transition-colors flex items-start">
                             <span class="mr-2">→</span>
-                            <span>Ontario HVAC Pros: Don't Let 'Furnace Season' Turn Your Admin Into a Disaster Zone</span>
+                            <span>Manhattan Building Techs: Stop Losing $50k Service Contracts to 'Post-it' Admin</span>
                         </a>
                     </li>
                     <li>
@@ -625,21 +633,21 @@
                         </a>
                     </li>
                     <li>
-                        <a href="hvac-heat-pump-scripts-vancouver.html" class="text-gray-300 hover:text-white transition-colors flex items-start">
+                        <a href="condo-hvac-toronto-maintenance.html" class="text-gray-300 hover:text-white transition-colors flex items-start">
                             <span class="mr-2">→</span>
-                            <span>Vancouver HVAC: Stop Losing $15k Heat Pump Installs to 'Paperwork Mess'</span>
+                            <span>Toronto Condo Techs: Stop Losing $400 Fan-Coil Repairs to High-Rise Logistics</span>
                         </a>
                     </li>
                     <li>
-                        <a href="hvac-efficiency-scripts-london.html" class="text-gray-300 hover:text-white transition-colors flex items-start">
+                        <a href="commercial-hvac-scripts-melbourne.html" class="text-gray-300 hover:text-white transition-colors flex items-start">
                             <span class="mr-2">→</span>
-                            <span>London HVAC Engineers: Is the ULEZ Charge the Only Thing Eating Your 2026 Profits?</span>
+                            <span>Melbourne Facility Managers: Why Your Messy Admin is Ghosting $20k Service Contracts</span>
                         </a>
                     </li>
                     <li>
-                        <a href="commercial-hvac-scripts-chicago-loop.html" class="text-gray-300 hover:text-white transition-colors flex items-start">
+                        <a href="hvac-lead-capture-nyc.html" class="text-gray-300 hover:text-white transition-colors flex items-start">
                             <span class="mr-2">→</span>
-                            <span>Chicago Loop Facility Techs: Stop Losing $50k Service Contracts to 'Post-it' Admin</span>
+                            <span>NYC HVAC Techs: Scrawling Job Notes on Scraps is Bleeding Your 2026 Bottom Line</span>
                         </a>
                     </li>
                 </ul>
